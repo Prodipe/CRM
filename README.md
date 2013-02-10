@@ -1,7 +1,7 @@
-CakePHP
-=======
+CRM
+===
 
-[![CRM](logo.png)]
+[!(logo.png)]
 
 Aplicação CRM (Gestão de Relacionamento com o Cliente) utilizando o Framework CakePHP.
 
