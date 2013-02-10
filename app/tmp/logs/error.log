@@ -1,0 +1,396 @@
+2013-02-05 19:52:43 Error: [MissingViewException] View file "C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Empresas\index.ctp" is missing.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-05 21:33:57 Error: [MissingActionException] Action EmpresasController::view() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-05 21:51:20 Error: [MissingViewException] View file "C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Empresas\ver.ctp" is missing.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-06 13:38:09 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\EmpresasController.php, line 67]
+2013-02-06 13:38:09 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 67)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 67, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 67, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-07 12:04:04 Error: [MissingControllerException] Controller class CategoriasController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-07 15:44:58 Error: [MissingHelperException] Helper class EmpresaHelper could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\HelperCollection.php(62): HelperCollection->load('Empresa')
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(815): HelperCollection->__isset('Empresa')
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Usuarios\adicionar.ctp(7): View->__get('Empresa')
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(923): include('C:\Program File...')
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(886): View->_evaluate('C:\Program File...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(476): View->_render('C:\Program File...')
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-02-07 15:45:42 Error: [MissingHelperException] Helper class EmpresaHelper could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\HelperCollection.php(62): HelperCollection->load('Empresa')
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(815): HelperCollection->__isset('Empresa')
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Usuarios\adicionar.ctp(7): View->__get('Empresa')
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(923): include('C:\Program File...')
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(886): View->_evaluate('C:\Program File...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(476): View->_render('C:\Program File...')
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-02-07 20:42:34 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php, line 25]
+2013-02-07 20:42:34 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Program File...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Program File...', 25, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Program File...', 25, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-07 20:43:15 Error: Fatal Error (1): Call to a member function find() on a non-object in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php, line 25]
+2013-02-07 20:43:15 Error: [FatalErrorException] Call to a member function find() on a non-object
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Program File...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Program File...', 25, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Program File...', 25, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-07 21:17:05 Error: [MissingControllerException] Controller class UsuarioController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-07 21:17:15 Error: [MissingControllerException] Controller class UsuarioController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 11:53:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Usuario.empresa_id' in 'where clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Empresa...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Empresa...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Empresa...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Empresa), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php(7): Model->find('list', Array)
+#6 [internal function]: UsuariosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 11:54:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'empresa_id' in 'where clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Empresa...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Empresa...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Empresa...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Empresa), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php(7): Model->find('list', Array)
+#6 [internal function]: UsuariosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 12:16:36 Error: Fatal Error (4): syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php, line 12]
+2013-02-08 12:16:36 Error: [FatalErrorException] syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 12, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 12, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 12:17:06 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Usuario'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Usuario...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Usuario...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Usuario...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Usuario), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php(10): Model->find('all', Array)
+#6 [internal function]: UsuariosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 12:18:24 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1066 Not unique table/alias: 'Empresa'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Usuario...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Usuario...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Usuario...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Usuario), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php(10): Model->find('all', Array)
+#6 [internal function]: UsuariosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 14:26:46 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Clientes\adicionar.ctp, line 11]
+2013-02-08 14:26:46 Error: [FatalErrorException] syntax error, unexpected '<'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 14:27:05 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Clientes\adicionar.ctp, line 11]
+2013-02-08 14:27:05 Error: [FatalErrorException] syntax error, unexpected '<'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 14:27:25 Error: Fatal Error (4): syntax error, unexpected '<' in [C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Clientes\adicionar.ctp, line 11]
+2013-02-08 14:27:25 Error: [FatalErrorException] syntax error, unexpected '<'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 15:00:21 Error: [MissingControllerException] Controller class ParametroController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 15:00:51 Error: [MissingControllerException] Controller class ParametroController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 15:02:03 Error: [MissingControllerException] Controller class ClienteController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 15:04:09 Error: [MissingControllerException] Controller class ClienteController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 15:04:12 Error: [MissingControllerException] Controller class ClienteController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-08 16:05:04 Error: Fatal Error (4): syntax error, unexpected '(' in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Model\Atendimento.php, line 4]
+2013-02-08 16:05:04 Error: [FatalErrorException] syntax error, unexpected '('
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 4)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 4, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 4, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 16:05:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Atendim...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Atendim...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Atendim...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#6 [internal function]: AtendimentosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:08:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Atendim...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Atendim...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Atendim...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#6 [internal function]: AtendimentosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:10:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Atendim...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Atendim...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Atendim...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#6 [internal function]: AtendimentosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:10:45 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Atendim...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Atendim...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Atendim...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#6 [internal function]: AtendimentosController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:39:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Categoria), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\CategoriasController.php(6): Model->find('all')
+#6 [internal function]: CategoriasController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:41:02 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\CategoriasController.php, line 25]
+2013-02-08 16:41:02 Error: [FatalErrorException] Call to a member function create() on a non-object
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Program File...', 25)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Program File...', 25, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Program File...', 25, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 16:44:00 Error: Fatal Error (1): Call to a member function create() on a non-object in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php, line 30]
+2013-02-08 16:44:00 Error: [FatalErrorException] Call to a member function create() on a non-object
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Program File...', 30)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Program File...', 30, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Program File...', 30, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-08 16:44:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'field list'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Atendimento), 'SELECT `Categor...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Atendimento), Object(Categoria), 'hasMany', 'Categoria', Array, Array, true, Array, 0, Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#8 [internal function]: AtendimentosController->index()
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-02-08 16:47:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'field list'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Atendimento), 'SELECT `Categor...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Atendimento), Object(Categoria), 'hasMany', 'Categoria', Array, Array, true, Array, 0, Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#8 [internal function]: AtendimentosController->index()
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-02-08 16:48:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'field list'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Atendimento), 'SELECT `Categor...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Atendimento), Object(Categoria), 'hasMany', 'Categoria', Array, Array, true, Array, 0, Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#8 [internal function]: AtendimentosController->index()
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-02-08 16:49:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'field list'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Atendimento), 'SELECT `Categor...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Atendimento), Object(Categoria), 'hasMany', 'Categoria', Array, Array, true, Array, 0, Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#8 [internal function]: AtendimentosController->index()
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-02-08 16:52:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Categoria), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(598): Model->find('first', Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(788): DboSource->query('findById', Array, Object(Categoria))
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\CategoriasController.php(40): Model->__call('findById', Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\CategoriasController.php(40): Categoria->findById('1')
+#9 [internal function]: CategoriasController->editar('1')
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest), Object(CakeResponse))
+#13 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2013-02-08 16:52:42 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Categoria), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\CategoriasController.php(6): Model->find('all')
+#6 [internal function]: CategoriasController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:57:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'on clause'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1080): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Categoria), Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\CategoriasController.php(6): Model->find('all')
+#6 [internal function]: CategoriasController->index()
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(CategoriasController), Array)
+#8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest), Object(CakeResponse))
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-02-08 16:57:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'field list'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Atendimento), 'SELECT `Categor...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Atendimento), Object(Categoria), 'hasMany', 'Categoria', Array, Array, true, Array, 0, Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#8 [internal function]: AtendimentosController->index()
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-02-08 16:57:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Categoria.atendimento_id' in 'field list'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('SELECT `Categor...', Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(669): DboSource->execute('SELECT `Categor...', Array, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1342): DboSource->fetchAll('SELECT `Categor...', false)
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1204): DboSource->fetchAssociated(Object(Atendimento), 'SELECT `Categor...', Array)
+#5 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1115): DboSource->queryAssociation(Object(Atendimento), Object(Categoria), 'hasMany', 'Categoria', Array, Array, true, Array, 0, Array)
+#6 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(2642): DboSource->read(Object(Atendimento), Array)
+#7 C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\AtendimentosController.php(6): Model->find('all')
+#8 [internal function]: AtendimentosController->index()
+#9 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(AtendimentosController), Array)
+#10 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
