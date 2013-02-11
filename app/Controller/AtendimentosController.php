@@ -21,6 +21,7 @@
 		}
 		
 		public function adicionar() {
+			// Arrays com os nomes
 			$this->set('empresa', $this->Atendimento->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			$this->set('usuario', $this->Atendimento->Usuario->find('list', array('fields' => array('Usuario.nome'))));
 			$this->set('cliente', $this->Atendimento->Cliente->find('list', array('fields' => array('Cliente.nome'))));
@@ -46,7 +47,8 @@
 			if (!$atendimento) {
 				throw new NotFoundException(__('Inválido'));
 			}
-
+			
+			// Arrays com os nomes
 			$this->set('empresa', $this->Atendimento->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			$this->set('usuario', $this->Atendimento->Usuario->find('list', array('fields' => array('Usuario.nome'))));
 			$this->set('cliente', $this->Atendimento->Cliente->find('list', array('fields' => array('Cliente.nome'))));

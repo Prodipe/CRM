@@ -1,23 +1,55 @@
-﻿<p><?php echo h($atendimento['Atendimento']['id']); ?></p>
+﻿<h3>Atendimento</h3>
 
-<p><?php echo ($atendimento['Atendimento']['protocolo']); ?></p>
+<!-- Verifica o status do atendimento
+		0 = 'Ativo' e 1 = 'Inativo' 
+-->
+<?php 
+	if ($atendimento['Atendimento']['status'] == '0') {
+		$status = "Ativo";
+	}
+	else {
+		$status = "Inativo";
+	}
+?>
 
-<p><?php echo ($atendimento['Atendimento']['data_hora']); ?></p>
+<!-- Verifica a prioridade do atendimento
+	   0 = 'Baixa', 1 = 'Média' e 2 = 'Alta' 
+-->
+<?php 
+	if ($atendimento['Atendimento']['prioridade'] == '0') {
+		$prioridade = "Baixa";
+	}
+	else if ($atendimento['Atendimento']['prioridade'] == '1') {
+		$prioridade = "Média";
+	}
+	else {
+		$prioridade = "Alta";
+	}
+?>
 
-<p><?php echo ($atendimento['Atendimento']['status']); ?></p>
+<p><?php echo "ID: " . $atendimento['Atendimento']['id']; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['prioridade']); ?></p>
+<p><?php echo "Protocolo: " . $atendimento['Atendimento']['protocolo']; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['plano_atendimento']); ?></p>
+<p><?php echo "Data/Hora: " . $atendimento['Atendimento']['data_hora']; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['observacoes']); ?></p>
+<p><?php echo "Status: " . $status; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['nota']); ?></p>
+<p><?php echo "Prioridade: " . $prioridade; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['empresa_id']); ?></p>
+<p><?php echo "Plano de atendimento: " . $atendimento['Atendimento']['plano_atendimento']; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['usuario_id']); ?></p>
+<p><?php echo "Observações: " . $atendimento['Atendimento']['observacoes']; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['cliente_id']); ?></p>
+<p><?php echo "Nota Recebida: " . $atendimento['Atendimento']['nota']; ?></p>
 
-<p><?php echo ($atendimento['Atendimento']['categoria_id']); ?></p>
+<p><?php echo "Empresa: " . $atendimento['Atendimento']['empresa_id']; ?></p>
+
+<p><?php echo "Usuário: " . $atendimento['Atendimento']['usuario_id']; ?></p>
+
+<p><?php echo "Cliente: " . $atendimento['Atendimento']['cliente_id']; ?></p>
+
+<p><?php echo "Categoria: " . $atendimento['Atendimento']['categoria_id']; ?></p>
+
+<!-- Link para voltar -->
+<p><?php echo $this->HTML->link('Ir para atendimentos', array('controller' => 'atendimentos', 'action' => 'index')); ?></p>

@@ -62,7 +62,7 @@
 				throw new MethodNotAllowedException();
 			}
 			
-			if ($this->categoria->delete($id)) {
+			if ($this->Categoria->delete($id)) {
 				$this->Session->setFlash('A categoria: ' . $id . ' foi deletada');
 				$this->redirect(array('action' => 'index'));
 			}

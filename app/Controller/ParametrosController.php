@@ -21,6 +21,7 @@
 		}
 		
 		public function adicionar() {
+			// Array com o nome das empresas
 			$this->set('empresa', $this->Parametro->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			
 			if ($this->request->is('post')) {
@@ -43,7 +44,8 @@
 			if (!$parametro) {
 				throw new NotFoundException(__('Inválido'));
 			}
-
+			
+			// Array com o nome das empresas
 			$this->set('empresa', $this->Parametro->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			
 			if ($this->request->is('post') || $this->request->is('put')) {
@@ -68,7 +70,7 @@
 			
 			//$parametro = $this->Parametro->findById($id);
 			
-			if ($this->parametro->delete($id)) {
+			if ($this->Parametro->delete($id)) {
 				$this->Session->setFlash('O parâmetro: ' . $id . ' foi deletado');
 				$this->redirect(array('action' => 'index'));
 			}

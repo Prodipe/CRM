@@ -394,3 +394,144 @@
 #11 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
 #12 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #13 {main}
+2013-02-11 01:27:14 Error: [MissingControllerException] Controller class EmpreasController could not be found.
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-11 01:27:15 Error: [MissingControllerException] Controller class EmpreasController could not be found.
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-11 01:27:30 Error: [MissingControllerException] Controller class EmpreasController could not be found.
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-11 06:02:06 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\adicionar.ctp, line 11]
+2013-02-11 06:02:06 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 06:02:24 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\adicionar.ctp, line 11]
+2013-02-11 06:02:24 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 06:02:45 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\adicionar.ctp, line 11]
+2013-02-11 06:02:45 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 06:55:12 Error: Fatal Error (4): syntax error, unexpected 'h' (T_STRING), expecting ',' or ';' in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Empresas\ver.ctp, line 1]
+2013-02-11 06:55:12 Error: [FatalErrorException] syntax error, unexpected 'h' (T_STRING), expecting ',' or ';'
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 1)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 1, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 1, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 06:55:55 Error: Fatal Error (4): syntax error, unexpected '(', expecting ',' or ';' in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Empresas\ver.ctp, line 1]
+2013-02-11 06:55:55 Error: [FatalErrorException] syntax error, unexpected '(', expecting ',' or ';'
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 1)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 1, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 1, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 07:44:58 Error: Fatal Error (1): Call to a member function delete() on a non-object in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php, line 76]
+2013-02-11 07:44:58 Error: [FatalErrorException] Call to a member function delete() on a non-object
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Program File...', 76)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Program File...', 76, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Program File...', 76, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 07:49:08 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\adicionar.ctp, line 14]
+2013-02-11 07:49:08 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 14, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 14, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 08:28:40 Error: Fatal Error (4): syntax error, unexpected '==' (T_IS_EQUAL) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\index.ctp, line 21]
+2013-02-11 08:28:40 Error: [FatalErrorException] syntax error, unexpected '==' (T_IS_EQUAL)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 21, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 21, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 08:29:02 Error: Fatal Error (4): syntax error, unexpected '==' (T_IS_EQUAL) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\index.ctp, line 21]
+2013-02-11 08:29:02 Error: [FatalErrorException] syntax error, unexpected '==' (T_IS_EQUAL)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 21)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 21, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 21, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 08:31:59 Error: Fatal Error (1): Call to a member function isEqual() on a non-object in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Usuarios\index.ctp, line 21]
+2013-02-11 08:31:59 Error: [FatalErrorException] Call to a member function isEqual() on a non-object
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\Program File...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\Program File...', 21, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\Program File...', 21, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 09:57:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'telefone2' cannot be null
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(459): PDOStatement->execute(Array)
+#1 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(425): DboSource->_execute('INSERT INTO `cr...', Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Model\Datasource\DboSource.php(1007): DboSource->execute('INSERT INTO `cr...')
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Model\Model.php(1735): DboSource->create(Object(Cliente), Array, Array)
+#4 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\Controller\ClientesController.php(29): Model->save(Array)
+#5 [internal function]: ClientesController->adicionar()
+#6 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientesController), Array)
+#7 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#8 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
+#9 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-02-11 11:01:36 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Atendimentos\ver.ctp, line 34]
+2013-02-11 11:01:36 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 34, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 34, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 11:01:45 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Atendimentos\ver.ctp, line 34]
+2013-02-11 11:01:45 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 34, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 34, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 11:34:33 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Atendimentos\editar.ctp, line 13]
+2013-02-11 11:34:33 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 13, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 13, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 11:35:12 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Atendimentos\editar.ctp, line 13]
+2013-02-11 11:35:12 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 13, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 13, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-11 11:35:19 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Atendimentos\editar.ctp, line 13]
+2013-02-11 11:35:19 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 13)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 13, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 13, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

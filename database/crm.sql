@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `atendimentos` (
   `status` varchar(50) NOT NULL,
   `prioridade` varchar(50) NOT NULL,
   `plano_atendimento` text NOT NULL,
-  `observacoes` text NOT NULL,
+  `observacoes` text DEFAULT NULL,
   `nota` varchar(50) NOT NULL,
   `empresa_id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `data_cadastro` datetime NOT NULL,
   `email` varchar(100) NOT NULL,
   `telefone1` int(15) NOT NULL,
-  `telefone2` int(15) NOT NULL,
+  `telefone2` int(15) DEFAULT NULL,
   `empresa_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;

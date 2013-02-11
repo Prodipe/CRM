@@ -278,3 +278,7 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
+
+// Traduzir meses para o português brasileiro
+// A seguinte linha pode ser incluída no arquivo /Config/core.php ou /Config/bootstrap.php
+//Configure::write('Config.language', 'br');

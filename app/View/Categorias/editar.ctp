@@ -1,4 +1,8 @@
-﻿<h1>Editar informações da categoria</h1>
+﻿<h2>Editar informações da categoria</h2>
+
+<!-- Link para voltar -->
+<p><?php echo $this->HTML->link('Voltar', array('controller' => 'categorias', 'action' => 'index')); ?></p>
+
 <?php
     echo $this->Form->create('Categoria');
     echo $this->Form->input('descricao', array('rows' => '3'));

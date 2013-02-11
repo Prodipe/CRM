@@ -4,15 +4,6 @@
 		
 		public function index() {
 			$this->set('usuarios', $this->Usuario->find('all'));
-			
-			/*$options['joins'] = array(array('table' => 'empresas', 'alias' => 'Empresa', 'type' => 'LEFT', 'conditions' => array(	'Empresa.id = Usuario.empresa_id')));
-			
-			$empresa = $this->Usuario->find('all', $options);
-			
-			$this->set('empresa', $empresa);*/
-			
-			/*$empresa = $this->Usuario->find('all', array('contain' => array('Empresa'), 'conditions' => array('Usuario.empresa_id' => 'Empresa.id')));
-			$this->set('empresa', $empresa);*/
 		}
 		
 		public function ver($id = null) {
@@ -30,6 +21,7 @@
 		}
 		
 		public function adicionar() {
+			// Array com o nome das empresas
 			$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 		
 			if ($this->request->is('post')) {
@@ -53,7 +45,8 @@
 			if (!$usuario) {
 				throw new NotFoundException(__('Inválido'));
 			}
-
+			
+			// Array com o nome das empresas
 			$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			
 			if ($this->request->is('post') || $this->request->is('put')) {
@@ -78,7 +71,7 @@
 			
 			$usuario = $this->Usuario->findById($id);
 			
-			if ($this->usuario->delete($id)) {
+			if ($this->Usuario->delete($id)) {
 				$this->Session->setFlash('O usuário: ' . $usuario['Usuario']['nome'] . ' foi deletado');
 				$this->redirect(array('action' => 'index'));
 			}

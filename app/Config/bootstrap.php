@@ -179,3 +179,7 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+// Traduzir meses para o português brasileiro
+// A seguinte linha pode ser incluída no arquivo /Config/core.php ou /Config/bootstrap.php
+Configure::write('Config.language', 'br');

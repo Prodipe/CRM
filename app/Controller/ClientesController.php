@@ -21,6 +21,7 @@
 		}
 		
 		public function adicionar() {
+			// Array com o nome das empresas
 			$this->set('empresa', $this->Cliente->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			
 			if ($this->request->is('post')) {
@@ -43,7 +44,8 @@
 			if (!$cliente) {
 				throw new NotFoundException(__('Inválido'));
 			}
-
+			
+			// Array com o nome das empresas
 			$this->set('empresa', $this->Cliente->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			
 			if ($this->request->is('post') || $this->request->is('put')) {
@@ -68,7 +70,7 @@
 			
 			$cliente = $this->Cliente->findById($id);
 			
-			if ($this->cliente->delete($id)) {
+			if ($this->Cliente->delete($id)) {
 				$this->Session->setFlash('O usuário: ' . $cliente['Cliente']['nome'] . ' foi deletado');
 				$this->redirect(array('action' => 'index'));
 			}
