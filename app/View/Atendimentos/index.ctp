@@ -57,7 +57,7 @@
 			<?php echo $this->HTML->link($atendimento['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'ver', $atendimento[	'Atendimento']['categoria_id'])); ?>
 		</td>
 		<td><?php echo $atendimento['Atendimento']['protocolo']; ?></td>
-		<td><?php echo $atendimento['Atendimento']['data_hora']; ?></td>
+		<td><?php echo $this->Time->format('d-m-Y / H:i:s', $atendimento['Atendimento']['data_hora']); ?></td> <!-- Define o formato da data/hora -->
 		<td><?php echo $status; ?></td>
 		<td><?php echo $prioridade; ?></td>
 		<td><?php echo $atendimento['Atendimento']['plano_atendimento']; ?></td>

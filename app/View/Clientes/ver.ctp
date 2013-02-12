@@ -20,7 +20,8 @@
 
 <p><?php echo "Status: " . $status; ?></p>
 
-<p><?php echo "Data de Cdastro: " . $cliente['Cliente']['data_cadastro']; ?></p>
+<!-- Define o formato da data/hora -->
+<p><?php echo "Data de Cadastro: " . $this->Time->format('d-m-Y / H:i:s', $cliente['Cliente']['data_cadastro']); ?></p>
 
 <p><?php echo "Email: " . $cliente['Cliente']['email']; ?></p>
 

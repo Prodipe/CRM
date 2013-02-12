@@ -31,7 +31,8 @@
 
 <p><?php echo "Protocolo: " . $atendimento['Atendimento']['protocolo']; ?></p>
 
-<p><?php echo "Data/Hora: " . $atendimento['Atendimento']['data_hora']; ?></p>
+<!-- Define o formato da data/hora -->
+<p><?php echo "Data/Hora: " . $this->Time->format('d-m-Y / H:i:s', $atendimento['Atendimento']['data_hora']); ?></p>
 
 <p><?php echo "Status: " . $status; ?></p>
 

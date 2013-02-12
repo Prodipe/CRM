@@ -6,7 +6,10 @@
 <?php
 	echo $this->Form->create('Atendimento');
 	echo $this->Form->input('protocolo');
-	echo $this->Form->input('data_hora');
+	
+	// Define a data no padrão Dia-Mês-Ano
+	echo $this->Form->input('data_hora', array('dateFormat' => 'DMY', 'minYear' => date('Y') - 80));
+	
 	echo $this->Form->input('status', array('options' => array('Ativo', 'Inativo'), 'empty' => '(Escolha um)'));
 	echo $this->Form->input('prioridade', array('options' => array('Baixa', 'Média', 'Alta'), 'empty' => '(Escolha um)'));
 	echo $this->Form->input('plano_atendimento');

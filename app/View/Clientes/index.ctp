@@ -36,7 +36,7 @@
         </td>
         <td><?php echo $cliente['Cliente']['matricula']; ?></td>
 		<td><?php echo $status; ?></td>
-		<td><?php echo $cliente['Cliente']['data_cadastro']; ?></td>
+		<td><?php echo $this->Time->format('d-m-Y / H:i:s', $cliente['Cliente']['data_cadastro']); ?></td> <!-- Define o formato da data/hora -->
 		<td><?php echo $cliente['Cliente']['email']; ?></td>
 		<td><?php echo $cliente['Cliente']['telefone1']; ?></td>
 		<td><?php echo $cliente['Cliente']['telefone2']; ?></td>
