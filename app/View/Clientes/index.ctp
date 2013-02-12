@@ -41,7 +41,7 @@
 		<td><?php echo $cliente['Cliente']['telefone1']; ?></td>
 		<td><?php echo $cliente['Cliente']['telefone2']; ?></td>
 		<td>
-			<?php echo $this->HTML->link($cliente['Cliente']['empresa_id'], array('controller' => 'empresas', 'action' => 'ver', $cliente['Cliente']['empresa_id'])); ?>
+			<?php echo $this->HTML->link($cliente['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $cliente['Cliente']['empresa_id'])); ?>
 		</td>
 		<td><?php echo $this->Html->link('Editar', array('action' => 'editar', $cliente['Cliente']['id'])); ?>
 			<?php echo $this->Form->postLink('Deletar',

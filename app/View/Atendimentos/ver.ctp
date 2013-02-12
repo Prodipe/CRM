@@ -43,13 +43,13 @@
 
 <p><?php echo "Nota Recebida: " . $atendimento['Atendimento']['nota']; ?></p>
 
-<p><?php echo "Empresa: " . $atendimento['Atendimento']['empresa_id']; ?></p>
+<p><?php echo "Empresa: " . $atendimento['Empresa']['nome']; ?></p>
 
-<p><?php echo "Usuário: " . $atendimento['Atendimento']['usuario_id']; ?></p>
+<p><?php echo "Usuário: " . $atendimento['Usuario']['nome']; ?></p>
 
-<p><?php echo "Cliente: " . $atendimento['Atendimento']['cliente_id']; ?></p>
+<p><?php echo "Cliente: " . $atendimento['Cliente']['nome']; ?></p>
 
-<p><?php echo "Categoria: " . $atendimento['Atendimento']['categoria_id']; ?></p>
+<p><?php echo "Categoria: " . $atendimento['Categoria']['descricao']; ?></p>
 
 <!-- Link para voltar -->
 <p><?php echo $this->HTML->link('Ir para atendimentos', array('controller' => 'atendimentos', 'action' => 'index')); ?></p>

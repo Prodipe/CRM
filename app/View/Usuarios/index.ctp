@@ -34,7 +34,7 @@
 		<td><?php echo $status; ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($usuario['Usuario']['empresa_id'], array('controller' => 'empresas', 'action' => 'ver', $usuario['Usuario']['empresa_id'])); ?>
+			<?php echo $this->HTML->link($usuario['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $usuario['Usuario']['empresa_id'])); ?>
 		</td>
 		<td><?php echo $this->Html->link('Editar', array('action' => 'editar', $usuario['Usuario']['id'])); ?>
 			<?php echo $this->Form->postLink('Deletar',

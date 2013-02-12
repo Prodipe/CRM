@@ -28,7 +28,7 @@
 
 <p><?php echo "Telefone 2: " . $cliente['Cliente']['telefone2']; ?></p>
 
-<p><?php echo "Empresa: " . $cliente['Cliente']['empresa_id']; ?></p>
+<p><?php echo "Empresa: " . $cliente['Empresa']['nome']; ?></p>
 
 <!-- Link para voltar -->
 <p><?php echo $this->HTML->link('Ir para clientes', array('controller' => 'clientes', 'action' => 'index')); ?></p>

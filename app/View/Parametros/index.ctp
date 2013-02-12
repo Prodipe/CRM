@@ -17,7 +17,7 @@
             <?php echo $this->Html->link($parametro['Parametro']['descricao'], array('controller' => 'parametros', 'action' => 'ver', $parametro['Parametro']['id'])); ?>
         </td>
         <td><?php echo $parametro['Parametro']['valor']; ?></td>
-		<td><?php echo $this->HTML->link($parametro['Parametro']['empresa_id'], array('controller' => 'empresas', 'action' => 'ver', $parametro['Parametro']['empresa_id'])); ?></td>
+		<td><?php echo $this->HTML->link($parametro['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $parametro['Parametro']['empresa_id'])); ?></td>
 		<td><?php echo $this->Html->link('Editar', array('action' => 'editar', $parametro['Parametro']['id'])); ?>
 			<?php echo $this->Form->postLink('Deletar',
                 array('action' => 'deletar', $parametro['Parametro']['id']),

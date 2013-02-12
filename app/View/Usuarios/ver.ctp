@@ -1,8 +1,18 @@
 ﻿<h3>Usuário</h3>
 
+<?php
+/*
+	$count = count($empresa);
+	for ($i = 1; $i <= $count; $i++) {
+		echo $empresa[$i];
+	}
+	exit;
+*/
+?>
+
 <?php 
-	/*var_dump($empresa);
-	exit;*/
+	//echo ($usuario['Empresa']['nome']);
+	//exit;
 ?>
 
 <!-- Verifica o status do usuário 
@@ -25,7 +35,7 @@
 
 <p><?php echo "Status: " . $status; ?></p>
 
-<p><?php echo "Empresa: " . $usuario['Usuario']['empresa_id']; ?></p>
+<p><?php echo "Empresa: " . $usuario['Empresa']['nome']; ?></p>
 
 <!-- Link para voltar -->
 <p><?php echo $this->HTML->link('Ir para usuários', array('controller' => 'usuarios', 'action' => 'index')); ?></p>

@@ -51,10 +51,10 @@
             <?php echo $this->Html->link($atendimento['Atendimento']['id'], array('controller' => 'atendimentos', 'action' => 'ver', $atendimento['Atendimento']['id'])); ?>
         </td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Atendimento']['cliente_id'], array('controller' => 'clientes', 'action' => 'ver', $atendimento[	'Atendimento']['cliente_id'])); ?>
+			<?php echo $this->HTML->link($atendimento['Cliente']['nome'], array('controller' => 'clientes', 'action' => 'ver', $atendimento[	'Atendimento']['cliente_id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Atendimento']['categoria_id'], array('controller' => 'categorias', 'action' => 'ver', $atendimento[	'Atendimento']['categoria_id'])); ?>
+			<?php echo $this->HTML->link($atendimento['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'ver', $atendimento[	'Atendimento']['categoria_id'])); ?>
 		</td>
 		<td><?php echo $atendimento['Atendimento']['protocolo']; ?></td>
 		<td><?php echo $atendimento['Atendimento']['data_hora']; ?></td>
@@ -64,10 +64,10 @@
 		<td><?php echo $atendimento['Atendimento']['observacoes']; ?></td>
 		<td><?php echo $atendimento['Atendimento']['nota']; ?></td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Atendimento']['empresa_id'], array('controller' => 'empresas', 'action' => 'ver', $atendimento[	'Atendimento']['empresa_id'])); ?>
+			<?php echo $this->HTML->link($atendimento['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $atendimento[	'Atendimento']['empresa_id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Atendimento']['usuario_id'], array('controller' => 'usuarios', 'action' => 'ver', $atendimento[	'Atendimento']['usuario_id'])); ?>
+			<?php echo $this->HTML->link($atendimento['Usuario']['nome'], array('controller' => 'usuarios', 'action' => 'ver', $atendimento[	'Atendimento']['usuario_id'])); ?>
 		</td>
 		<td><?php echo $this->Html->link('Editar', array('action' => 'editar', $atendimento['Atendimento']['id'])); ?>
 			<?php echo $this->Form->postLink('Deletar',
