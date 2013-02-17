@@ -556,3 +556,44 @@
 #3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2013-02-14 20:15:40 Error: [MissingActionException] Action ClientesController::atendimentos() could not be found.
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-14 20:20:06 Error: [NotFoundException] Inválido
+#0 [internal function]: ClientesController->editar('1')
+#1 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(ClientesController), Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-14 20:23:40 Error: [MissingActionException] Action ClientesController::atendimentos() could not be found.
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-14 21:09:17 Error: Fatal Error (1): Call to undefined method View::redirect() in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Clientes\ver.ctp, line 118]
+2013-02-14 21:09:17 Error: [FatalErrorException] Call to undefined method View::redirect()
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Program File...', 118)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Program File...', 118, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Program File...', 118, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-14 21:09:46 Error: Fatal Error (4): syntax error, unexpected ')', expecting ',' or ';' in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Clientes\ver.ctp, line 118]
+2013-02-14 21:09:46 Error: [FatalErrorException] syntax error, unexpected ')', expecting ',' or ';'
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 118)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 118, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 118, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-14 21:09:56 Error: Fatal Error (1): Call to undefined method View::redirect() in [C:\Program Files (x86)\EasyPHP-12.1\www\CRM\app\View\Clientes\ver.ctp, line 118]
+2013-02-14 21:09:56 Error: [FatalErrorException] Call to undefined method View::redirect()
+#0 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Program File...', 118)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Program File...', 118, Array)
+#2 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Program File...', 118, Array)
+#3 C:\Program Files (x86)\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
