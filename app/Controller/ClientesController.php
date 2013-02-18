@@ -1,9 +1,11 @@
 ﻿<?php
+	//Import controller
+	//App::import('Controller', 'Atendimentos');
+
 	class ClientesController extends AppController {
 		public $helpers = array('Html', 'Form');
-		//Import controller
-		//App::import('Controller', 'Atendimentos');
-		//Atendimento = new AtendimentosController;
+		//$Atendimento = new AtendimentosController();
+		//$Atendimento->constructClasses();
 		
 		public function index() {
 			$this->set('clientes', $this->Cliente->find('all'));
@@ -94,13 +96,26 @@
 				throw new NotFoundException(__('Inválido'));
 			}
 			
-			//Atendimento->Emp;
-			$this->set('cliente');
-			//$this->render('');
+			//$this->Cliente->Atendimento->cliente_id = $id;
+			
+			$this->set('empresa', $this->Cliente->Atendimento->Empresa->find('list', array('fields' => array('Empresa.nome'))));
+			$this->set('usuario', $this->Cliente->Atendimento->Usuario->find('list', array('fields' => array('Usuario.nome'))));
+			$this->set('categoria', $this->Cliente->Atendimento->Categoria->find('list', array('fields' => array('Categoria.descricao'))));
+			$this->set('cliente', $cliente);
+			
+			if ($this->request->is('post')) {
+				$this->Cliente->Atendimento->create();
+				if ($this->Cliente->Atendimento->save($this->request->data)) {
+					$this->Session->setFlash('As informações foram adicionadas');
+					$this->redirect(array('action' => 'ver', $id));
+				} else {
+					$this->Session->setFlash('As informações não foram adicionadas');
+				}
+			}
 		}
 		
 		public function voltar() {
-				$this->redirect($this->referer());
+			$this->redirect($this->referer());
 		}
 	}
 ?>

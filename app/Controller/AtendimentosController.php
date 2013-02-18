@@ -79,5 +79,36 @@
 				$this->redirect(array('action' => 'index'));
 			}
 		}
+		
+		/*
+		// Adicionar um atendimento para o cliente
+		public function clientes($id = null) {
+			if (!$id) {
+				throw new NotFoundException(__('Inválido'));
+			}
+			
+			$cliente = $this->Atendimento->Cliente->findById($id);
+			
+			if (!$cliente) {
+				throw new NotFoundException(__('Inválido'));
+			}
+			
+			$this->Atendimento->cliente_id = $id;
+			
+			$this->set('empresa', $this->Atendimento->Empresa->find('list', array('fields' => array('Empresa.nome'))));
+			$this->set('usuario', $this->Atendimento->Usuario->find('list', array('fields' => array('Usuario.nome'))));
+			$this->set('categoria', $this->Atendimento->Categoria->find('list', array('fields' => array('Categoria.descricao'))));
+			
+			if ($this->request->is('post')) {
+				$this->Atendimento->create();
+				if ($this->Atendimento->save($this->request->data)) {
+					$this->Session->setFlash('As informações foram adicionadas');
+					$this->redirect(array('controller' => 'clientes', 'action' => 'ver', $id));
+				} else {
+					$this->Session->setFlash('As informações não foram adicionadas');
+				}
+			}
+		}
+		*/
 	}
 ?>

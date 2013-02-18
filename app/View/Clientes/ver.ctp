@@ -34,7 +34,9 @@
 <h3>Atendimentos do Cliente</h3>
 
 <!-- Cadastrar um atendimento para o cliente -->
-<?php echo $this->Html->link('Novo Atendimento', array('controller' => 'atendimentos', 'action' => 'adicionar', $cliente['Cliente']['id'])); ?>
+<?php //echo $this->Html->link('Novo Atendimento', array('controller' => 'atendimentos', 'action' => 'adicionar', $cliente['Cliente']['id'])); ?>
+<?php echo $this->Html->link('Novo Atendimento', array('controller' => 'clientes', 'action' => 'atendimentos', $cliente['Cliente']['id'])); ?>
+<?php //echo $this->Html->link('Novo Atendimento', array('controller' => 'atendimentos', 'action' => 'clientes', $cliente['Cliente']['id'])); ?>
 
 <table>
 	<tr>

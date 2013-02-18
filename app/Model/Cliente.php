@@ -33,7 +33,7 @@
 			'empresa_id' => array(
 				'rule' => 'notEmpty',
 				'message' => 'Preencha o campo'
-			)
+			),
 		);
 	}
 ?>
