@@ -1,4 +1,4 @@
-﻿<h2>Adicionar Atendimento Para o Cliente</h2>
+﻿<h2>Adicionar Atendimento para o Cliente</h2>
 
 <?php //print_r($empresa ); ?>
 <?php //print_r($cliente); ?>
@@ -22,7 +22,11 @@
 	echo $this->Form->input('observacoes', array('rows' => '3'));
 	echo $this->Form->input('nota');
 	echo $this->Form->input('empresa_id', array('options' => $empresa, 'empty' => '(Escolha um)'));
-	echo $this->Form->input('usuario_id', array('options' => $usuario, 'empty' => '(Escolha um)'));
+	
+	//echo $this->Form->input('usuario_id', array('options' => $usuario, 'empty' => '(Escolha um)'));
+	//O id do usuário já é passado automaticamente, a partir do usuário que está logado
+	echo $this->Form->input('usuario_id', array('type' => 'hidden', 'value' => AuthComponent::user('id')));
+	
 	echo $this->Form->input('categoria_id', array('options' => $categoria, 'empty' => '(Escolha um)'));
 	
 	// O id do cliente já é passado automaticamente, o usuário não precisa informar

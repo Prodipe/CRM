@@ -1,6 +1,6 @@
 ﻿<h3>Usuários Cadastrados</h3>
 
-<?php echo $this->Html->link('Adicionar um usuário', array('controller' => 'usuarios', 'action' => 'adicionar')); ?>
+<?php //echo $this->Html->link('Adicionar um usuário', array('controller' => 'usuarios', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>

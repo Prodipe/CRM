@@ -28,9 +28,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
-
 		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -40,6 +38,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="container">
 		<div id="header">
 			<h1>CRM</h1>
+			
+			<?php if (AuthComponent::user('nome') != null) { ?>
+					<h1><?php echo "Bem-vindo(a) " . AuthComponent::user('nome');?></h1>
+			<?php } ?>
+			
 		</div>
 		<div id="content">
 				<?php echo $this->HTML->link('Empresas', array('controller' => 'empresas', 'action' => 'index'));?>
@@ -48,6 +51,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<?php echo $this->HTML->link('Atendimentos', array('controller' => 'atendimentos', 'action' => 'index'));?>
 				<?php echo $this->HTML->link('Categorias', array('controller' => 'categorias', 'action' => 'index'));?>
 				<?php echo $this->HTML->link('Parametros', array('controller' => 'parametros', 'action' => 'index'));?>
+				<?php echo $this->HTML->link('Logout', array('controller' => 'usuarios', 'action' => 'logout'));?>
 				
 				<br><br>
 				

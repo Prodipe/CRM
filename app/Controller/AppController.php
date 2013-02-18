@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Application level Controller
  *
@@ -31,5 +31,49 @@ App::uses('Controller', 'Controller');
  * @package       app.Controller
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
+ 
 class AppController extends Controller {
+	public $helpers = array('Html', 'Form', 'Session');
+	
+	public $components = array(        
+        'Auth',
+        'Session',
+    );
+	
+   public function beforeFilter()
+   {
+        $this->Auth->authenticate = array(
+            AuthComponent::ALL => array(
+                'userModel' => 'Usuario',
+                'fields' => array(
+                    'username' => 'username',
+					'password' => 'password',
+                    )
+                ),
+            'Form',
+            );   
+        
+        $this->Auth->loginAction = array(
+            'plugin' => null,
+            'controller' => 'usuarios',
+            'action' => 'login',
+        );
+       
+        $this->Auth->logoutRedirect = array(
+            'plugin' => null,
+            'controller' => 'usuarios',
+            'action' => 'login',
+        );
+     
+        $this->Auth->loginRedirect = array(
+            'plugin' => null,
+            'controller' => 'empresas',
+            'action' => 'index',
+        );
+
+        $this->Auth->authError = 'Você precisa estar logado!';
+		$this->Auth->loginError = 'Nome de usúario ou senha não conferem!';
+		
+        $this->Auth->allowedActions = array('display', 'adicionar');
+   }
 }

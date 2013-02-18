@@ -20,7 +20,11 @@
 	//echo $this->Form->select('cliente_id', $cliente);
 	//echo $this->Form->select('categoria_id', $categoria);
 	echo $this->Form->input('empresa_id', array('options' => $empresa, 'empty' => '(Escolha um)'));
-	echo $this->Form->input('usuario_id', array('options' => $usuario, 'empty' => '(Escolha um)'));
+	
+	//echo $this->Form->input('usuario_id', array('options' => $usuario, 'empty' => '(Escolha um)'));
+	//O id do usuário já é passado automaticamente, a partir do usuário que está logado
+	echo $this->Form->input('usuario_id', array('type' => 'hidden', 'value' => AuthComponent::user('id')));
+	
 	echo $this->Form->input('cliente_id', array('options' => $cliente, 'empty' => '(Escolha um)'));
 	echo $this->Form->input('categoria_id', array('options' => $categoria, 'empty' => '(Escolha um)'));
 	echo $this->Form->end('Salvar');
