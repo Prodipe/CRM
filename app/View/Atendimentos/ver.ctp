@@ -3,19 +3,22 @@
 <!-- Verifica o status do atendimento
 		0 = 'Ativo' e 1 = 'Inativo' 
 -->
-<?php 
+<?php
+/*
 	if ($atendimento['Atendimento']['status'] == '0') {
 		$status = "Ativo";
 	}
 	else {
 		$status = "Inativo";
 	}
+*/	
 ?>
 
 <!-- Verifica a prioridade do atendimento
 	   0 = 'Baixa', 1 = 'Média' e 2 = 'Alta' 
 -->
-<?php 
+<?php
+/* 
 	if ($atendimento['Atendimento']['prioridade'] == '0') {
 		$prioridade = "Baixa";
 	}
@@ -25,6 +28,7 @@
 	else {
 		$prioridade = "Alta";
 	}
+*/	
 ?>
 
 <p><?php echo "ID: " . $atendimento['Atendimento']['id']; ?></p>
@@ -34,9 +38,9 @@
 <!-- Define o formato da data/hora -->
 <p><?php echo "Data/Hora: " . $this->Time->format('d-m-Y / H:i:s', $atendimento['Atendimento']['data_hora']); ?></p>
 
-<p><?php echo "Status: " . $status; ?></p>
+<p><?php echo "Status: " . $atendimento['Atendimento']['status']; //$status; ?></p>
 
-<p><?php echo "Prioridade: " . $prioridade; ?></p>
+<p><?php echo "Prioridade: " . $atendimento['Atendimento']['prioridade']; //$prioridade; ?></p>
 
 <p><?php echo "Plano de atendimento: " . $atendimento['Atendimento']['plano_atendimento']; ?></p>
 

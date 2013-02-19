@@ -17,12 +17,14 @@
 			0 = 'Ativo' e 1 = 'Inativo' 
 	-->
 	<?php 
+	/*
 		if ($usuario['Usuario']['status'] == '0') {
 			$status = "Ativo";
 		}
 		else {
 			$status = "Inativo";
 		}
+	*/	
 	?>
 	
     <tr>
@@ -31,7 +33,7 @@
             <?php echo $this->Html->link($usuario['Usuario']['nome'], array('controller' => 'usuarios', 'action' => 'ver', $usuario['Usuario']['id'])); ?>
         </td>
         <td><?php echo $usuario['Usuario']['matricula']; ?></td>
-		<td><?php echo $status; ?>
+		<td><?php echo $usuario['Usuario']['status']; //$status; ?>
 		</td>
 		<td>
 			<?php echo $this->HTML->link($usuario['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $usuario['Usuario']['empresa_id'])); ?>

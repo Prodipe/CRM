@@ -71,7 +71,7 @@ class AppController extends Controller {
             'action' => 'index',
         );
 
-        $this->Auth->authError = 'Você precisa estar logado!';
+        $this->Auth->authError = 'Realize o login!';
 		$this->Auth->loginError = 'Nome de usúario ou senha não conferem!';
 		
         $this->Auth->allowedActions = array('display', 'adicionar');

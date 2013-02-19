@@ -1,11 +1,6 @@
 ﻿<?php
-	//Import controller
-	//App::import('Controller', 'Atendimentos');
-
 	class ClientesController extends AppController {
 		public $helpers = array('Html', 'Form');
-		//$Atendimento = new AtendimentosController();
-		//$Atendimento->constructClasses();
 		
 		public function index() {
 			$this->set('clientes', $this->Cliente->find('all'));
@@ -35,10 +30,10 @@
 			if ($this->request->is('post')) {
 				$this->Cliente->create();
 				if ($this->Cliente->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram adicionadas');
+					$this->Session->setFlash(__('O cliente foi adicionado'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram adicionadas');
+					$this->Session->setFlash('Nenhum cliente foi adicionado');
 				}
 			}
 		}
@@ -47,7 +42,6 @@
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
-
 			$cliente = $this->Cliente->findById($id);
 			if (!$cliente) {
 				throw new NotFoundException(__('Inválido'));
@@ -59,13 +53,12 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Cliente->id = $id;
 				if ($this->Cliente->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram atualizadas');
+					$this->Session->setFlash(__('As informações do cliente foram atualizadas'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash('As informações não foram atualizadas');
 				}
 			}
-
 			if (!$this->request->data) {
 				$this->request->data = $cliente;
 			}
@@ -79,7 +72,7 @@
 			$cliente = $this->Cliente->findById($id);
 			
 			if ($this->Cliente->delete($id)) {
-				$this->Session->setFlash('O cliente: ' . $cliente['Cliente']['nome'] . ' foi deletado');
+				$this->Session->setFlash(__('O cliente: ' . $cliente['Cliente']['nome'] . ' foi deletado'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}
@@ -106,10 +99,10 @@
 			if ($this->request->is('post')) {
 				$this->Cliente->Atendimento->create();
 				if ($this->Cliente->Atendimento->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram adicionadas');
+					$this->Session->setFlash(__('O atendimento do cliente foi adicionado'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'ver', $id));
 				} else {
-					$this->Session->setFlash('As informações não foram adicionadas');
+					$this->Session->setFlash('O atendimento do cliente não foi adicionado');
 				}
 			}
 		}

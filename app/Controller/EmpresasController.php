@@ -24,10 +24,10 @@
 			if ($this->request->is('post')) {
 				$this->Empresa->create();
 				if ($this->Empresa->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram adicionadas');
+					$this->Session->setFlash(__('A empresa foi adicionada'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram adicionadas');
+					$this->Session->setFlash('Nenhuma empresa foi adicionada');
 				}
 			}
 		}
@@ -45,7 +45,7 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Empresa->id = $id;
 				if ($this->Empresa->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram atualizadas');
+					$this->Session->setFlash(__('As informações foram atualizadas'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash('As informações não foram atualizadas');
@@ -65,7 +65,7 @@
 			$empresa = $this->Empresa->findById($id);
 			
 			if ($this->Empresa->delete($id)) {
-				$this->Session->setFlash('A empresa: ' . $empresa['Empresa']['nome'] . ' foi deletada');
+				$this->Session->setFlash(__('A empresa: ' . $empresa['Empresa']['nome'] . ' foi deletada'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}

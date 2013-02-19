@@ -27,10 +27,10 @@
 			if ($this->request->is('post')) {
 				$this->Parametro->create();
 				if ($this->Parametro->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram adicionadas');
+					$this->Session->setFlash(__('O parâmetro foi adicionado'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram adicionadas');
+					$this->Session->setFlash('O parâmetro não foi adicionado');
 				}
 			}
 		}
@@ -51,7 +51,7 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Parametro->id = $id;
 				if ($this->Parametro->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram atualizadas');
+					$this->Session->setFlash(__('As informações do parâmetro foram atualizadas'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash('As informações não foram atualizadas');
@@ -71,7 +71,7 @@
 			//$parametro = $this->Parametro->findById($id);
 			
 			if ($this->Parametro->delete($id)) {
-				$this->Session->setFlash('O parâmetro: ' . $id . ' foi deletado');
+				$this->Session->setFlash(__('O parâmetro: ' . $id . ' foi deletado'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}

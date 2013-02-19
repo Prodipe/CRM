@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  *
  * PHP 5
@@ -46,11 +46,11 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 		<div id="content">
 				<?php echo $this->HTML->link('Empresas', array('controller' => 'empresas', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Usuarios', array('controller' => 'usuarios', 'action' => 'index'));?>
+				<?php echo $this->HTML->link('Usuários', array('controller' => 'usuarios', 'action' => 'index'));?>
 				<?php echo $this->HTML->link('Clientes', array('controller' => 'clientes', 'action' => 'index'));?>
 				<?php echo $this->HTML->link('Atendimentos', array('controller' => 'atendimentos', 'action' => 'index'));?>
 				<?php echo $this->HTML->link('Categorias', array('controller' => 'categorias', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Parametros', array('controller' => 'parametros', 'action' => 'index'));?>
+				<?php echo $this->HTML->link('Parâmetros', array('controller' => 'parametros', 'action' => 'index'));?>
 				<?php echo $this->HTML->link('Logout', array('controller' => 'usuarios', 'action' => 'logout'));?>
 				
 				<br><br>

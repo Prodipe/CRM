@@ -34,7 +34,7 @@
 			if ($this->request->is('post')) {
 				$this->Usuario->create();
 				if ($this->Usuario->save($this->request->data)) {
-					$this->Session->setFlash('Usuário cadastrado com sucesso!');
+					$this->Session->setFlash(__('Usuário cadastrado com sucesso!'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'login'));
 				} else {
 					$this->Session->setFlash('Erro durante o cadastro de usuário!');
@@ -46,7 +46,6 @@
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
-
 			$usuario = $this->Usuario->findById($id);
 			if (!$usuario) {
 				throw new NotFoundException(__('Inválido'));
@@ -58,13 +57,12 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Usuario->id = $id;
 				if ($this->Usuario->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram atualizadas');
+					$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash('As informações não foram atualizadas');
 				}
 			}
-
 			if (!$this->request->data) {
 				$this->request->data = $usuario;
 			}
@@ -78,12 +76,13 @@
 			$usuario = $this->Usuario->findById($id);
 			
 			if ($this->Usuario->delete($id)) {
-				$this->Session->setFlash('O usuário: ' . $usuario['Usuario']['nome'] . ' foi deletado');
+				$this->Session->setFlash(__('O usuário: ' . $usuario['Usuario']['nome'] . ' foi deletado'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}
 		
 		/* Área de login */
+		
 		public function login() {
 			$this->set('title_for_layout', __('Log in'));
 			if ($this->request->is('post')) {

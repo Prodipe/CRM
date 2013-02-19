@@ -20,13 +20,15 @@
 	<!-- Verifica o status do cliente 
 			0 = 'Ativo' e 1 = 'Inativo' 
 	-->
-	<?php 
+	<?php
+		/*
 		if ($cliente['Cliente']['status'] == '0') {
 			$status = "Ativo";
 		}
 		else {
 			$status = "Inativo";
 		}
+		*/
 	?>
 	
     <tr>
@@ -35,7 +37,7 @@
             <?php echo $this->Html->link($cliente['Cliente']['nome'], array('controller' => 'clientes', 'action' => 'ver', $cliente['Cliente']['id'])); ?>
         </td>
         <td><?php echo $cliente['Cliente']['matricula']; ?></td>
-		<td><?php echo $status; ?></td>
+		<td><?php echo $cliente['Cliente']['status']; //$status; ?></td>
 		<td><?php echo $this->Time->format('d-m-Y / H:i:s', $cliente['Cliente']['data_cadastro']); ?></td> <!-- Define o formato da data/hora -->
 		<td><?php echo $cliente['Cliente']['email']; ?></td>
 		<td><?php echo $cliente['Cliente']['telefone1']; ?></td>

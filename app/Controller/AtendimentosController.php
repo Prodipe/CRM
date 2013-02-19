@@ -30,10 +30,10 @@
 			if ($this->request->is('post')) {
 				$this->Atendimento->create();
 				if ($this->Atendimento->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram adicionadas');
+					$this->Session->setFlash(__('O atendimento foi adicionado'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram adicionadas');
+					$this->Session->setFlash('O atendimento não foi adicionado');
 				}
 			}
 		}
@@ -57,7 +57,7 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Atendimento->id = $id;
 				if ($this->Atendimento->save($this->request->data)) {
-					$this->Session->setFlash('As informações foram atualizadas');
+					$this->Session->setFlash(__('As informações do atendimento foram atualizadas'), 'default', array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash('As informações não foram atualizadas');
@@ -75,7 +75,7 @@
 			}
 			
 			if ($this->Atendimento->delete($id)) {
-				$this->Session->setFlash('O atendimento: ' . $id . ' foi deletado');
+				$this->Session->setFlash(__('O atendimento: ' . $id . ' foi deletado'), 'default', array('class' => 'success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}

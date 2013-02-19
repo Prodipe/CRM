@@ -5,8 +5,8 @@
 
 <?php
 	echo $this->Form->create('Parametro');
-	echo $this->Form->input('descricao', array('rows' => '3'));
-	echo $this->Form->input('valor');
+	echo $this->Form->input('descricao', array('label' => 'Descrição', 'rows' => '3'));
+	echo $this->Form->input('valor', array('label' => 'Valor'));
 	//echo $this->Form->select('empresa_id', $empresa);
 	echo $this->Form->input('empresa_id', array('options' => $empresa, 'empty' => '(Escolha um)'));
 	echo $this->Form->end('Salvar');
