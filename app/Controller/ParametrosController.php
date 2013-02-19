@@ -75,5 +75,18 @@
 				$this->redirect(array('action' => 'index'));
 			}
 		}
+		
+		// Ordenar os parâmetros
+		public function ordenar($tipo) {
+			if ($tipo == 'id') {
+				$this->set('parametros', $this->Parametro->find('all', array('order' => array('Parametro.id' => 'ASC'))));
+			}
+			if ($tipo == 'descricao') {
+				$this->set('parametros', $this->Parametro->find('all', array('order' => array('Parametro.descricao' => 'ASC'))));
+			}
+			if ($tipo == 'valor') {
+				$this->set('parametros', $this->Parametro->find('all', array('order' => array('Parametro.valor' => 'ASC'))));
+			}
+		}
 	}
 ?>

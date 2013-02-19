@@ -80,6 +80,28 @@
 			}
 		}
 		
+		// Ordenar os atendimentos
+		public function ordenar($tipo) {
+			if ($tipo == 'id') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.id' => 'ASC'))));
+			}
+			if ($tipo == 'protocolo') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.protocolo' => 'ASC'))));
+			}
+			if ($tipo == 'data') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.data_hora' => 'DESC'))));
+			}
+			if ($tipo == 'status') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.status' => 'ASC'))));
+			}
+			if ($tipo == 'prioridade') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.prioridade' => 'ASC'))));
+			}
+			if ($tipo == 'nota') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.nota' => 'ASC'))));
+			}
+		}
+		
 		/*
 		// Adicionar um atendimento para o cliente
 		public function clientes($id = null) {

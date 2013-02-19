@@ -69,5 +69,15 @@
 				$this->redirect(array('action' => 'index'));
 			}
 		}
+		
+		// Ordenar as empresas
+		public function ordenar($tipo) {
+			if ($tipo == 'nome') {
+				$this->set('empresas', $this->Empresa->find('all', array('order' => array('Empresa.nome' => 'ASC'))));
+			}
+			if ($tipo == 'razao') {
+				$this->set('empresas', $this->Empresa->find('all', array('order' => array('Empresa.razao_social' => 'ASC'))));
+			}
+		}
 	}
 ?>

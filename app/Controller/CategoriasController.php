@@ -66,5 +66,15 @@
 				$this->redirect(array('action' => 'index'));
 			}
 		}
+		
+		// Ordenar as categorias
+		public function ordenar($tipo) {
+			if ($tipo == 'id') {
+				$this->set('categorias', $this->Categoria->find('all', array('order' => array('Categoria.id' => 'ASC'))));
+			}
+			if ($tipo == 'descricao') {
+				$this->set('categorias', $this->Categoria->find('all', array('order' => array('Categoria.descricao' => 'ASC'))));
+			}
+		}
 	}
 ?>

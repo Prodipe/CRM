@@ -90,7 +90,6 @@
 			}
 			
 			//$this->Cliente->Atendimento->cliente_id = $id;
-			
 			$this->set('empresa', $this->Cliente->Atendimento->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			$this->set('usuario', $this->Cliente->Atendimento->Usuario->find('list', array('fields' => array('Usuario.nome'))));
 			$this->set('categoria', $this->Cliente->Atendimento->Categoria->find('list', array('fields' => array('Categoria.descricao'))));
@@ -107,8 +106,49 @@
 			}
 		}
 		
-		public function voltar() {
-			$this->redirect($this->referer());
+		// Ordenar os clientes
+		public function ordenar($tipo) {
+			if ($tipo == 'nome') {
+				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.nome' => 'ASC'))));
+			}
+			if ($tipo == 'matricula') {
+				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.matricula' => 'ASC'))));
+			}
+			if ($tipo == 'data_cadastro') {
+				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.data_cadastro' => 'DESC'))));
+			}
+			if ($tipo == 'status') {
+				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.status' => 'ASC'))));
+			}
+			if ($tipo == 'email') {
+				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.email' => 'ASC'))));
+			}
+			if ($tipo == 'telefone1') {
+				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.telefone1' => 'ASC'))));
+			}
 		}
+		
+		/*
+		// Ordenar os atendimentos do cliente
+		public function ordenar_atendimentos($tipo) {
+			if ($tipo == 'id') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.id' => 'ASC'))));
+			}
+			if ($tipo == 'protocolo') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.protocolo' => 'ASC'))));
+			}
+			if ($tipo == 'data') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.data_hora' => 'DESC'))));
+			}
+			if ($tipo == 'status') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.status' => 'ASC'))));
+			}
+			if ($tipo == 'prioridade') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.prioridade' => 'ASC'))));
+			}
+			if ($tipo == 'nota') {
+				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.nota' => 'ASC'))));
+			}
+		}*/
 	}
 ?>

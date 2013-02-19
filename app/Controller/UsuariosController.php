@@ -81,6 +81,22 @@
 			}
 		}
 		
+		// Ordenar os usuários
+		public function ordenar($tipo) {
+			if ($tipo == 'nome') {
+				$this->set('usuarios', $this->Usuario->find('all', array('order' => array('Usuario.nome' => 'ASC'))));
+			}
+			if ($tipo == 'login') {
+				$this->set('usuarios', $this->Usuario->find('all', array('order' => array('Usuario.login' => 'ASC'))));
+			}
+			if ($tipo == 'matricula') {
+				$this->set('usuarios', $this->Usuario->find('all', array('order' => array('Usuario.matricula' => 'ASC'))));
+			}
+			if ($tipo == 'status') {
+				$this->set('usuarios', $this->Usuario->find('all', array('order' => array('Usuario.status' => 'ASC'))));
+			}
+		}
+		
 		/* Área de login */
 		
 		public function login() {
