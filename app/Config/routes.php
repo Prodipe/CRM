@@ -27,7 +27,7 @@
  */
 	// Definindo a página inicial 
 	//Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
-	Router::connect('/', array('controller' => 'empresas', 'action' => 'index'));
+	Router::connect('/', array('controller' => 'usuarios', 'action' => 'index'));
 /**
  * ...and connect the rest of 'Pages' controller's urls.
  */

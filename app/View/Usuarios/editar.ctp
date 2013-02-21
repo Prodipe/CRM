@@ -6,11 +6,15 @@
 <?php
     echo $this->Form->create('Usuario');
 	echo $this->Form->input('nome');
+	
+	echo $this->Form->input('username', array('label' => 'Nome de Usuário'));
+	//echo $this->Form->input('password', array('label' => 'Nova Senha')); Opção trocar senha
+	
     echo $this->Form->input('matricula');
 	
-	$options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');
-	echo $this->Form->input('status', array('options' => $options, 'empty' => '(Escolha um)'));
-	//echo $this->Form->input('status', array('options' => array('Ativo', 'Inativo'), 'empty' => '(Escolha um)'));
+	//$options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');
+	//echo $this->Form->input('status', array('options' => $options, 'empty' => '(Escolha um)'));
+	echo $this->Form->input('status', array('options' => array('Inativo', 'Ativo'), 'empty' => '(Escolha um)'));
 	
 	//echo $this->Form->select('empresa_id', $empresa);
 	echo $this->Form->input('empresa_id', array('options' => $empresa, 'empty' => '(Escolha um)'));

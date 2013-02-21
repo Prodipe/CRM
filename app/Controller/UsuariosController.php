@@ -9,8 +9,12 @@
 			parent::beforeFilter();                     
 		}
 		
-		public function index() {
+		public function admin_index() {
 			$this->set('usuarios', $this->Usuario->find('all'));
+		}
+		
+		public function index() {
+			//$this->set('usuarios', $this->Usuario->find('all'));
 		}
 		
 		public function ver($id = null) {
@@ -98,22 +102,36 @@
 		}
 		
 		/* Área de login */
-		
 		public function login() {
 			$this->set('title_for_layout', __('Log in'));
 			if ($this->request->is('post')) {
 				if ($this->Auth->login()) {
-					return $this->redirect($this->Auth->redirect());
+					if ($this->Auth->user('nivel_acesso') == 1) {
+						return $this->redirect(array(
+							'admin' => true,
+                            'controller' => 'usuarios',
+                            'action' => 'index'
+                        ));
+					}
+					else {
+						return $this->redirect(array(
+                            'controller' => 'usuarios',
+                            'action' => 'index'
+                        ));
+					}
+					//return $this->redirect($this->Auth->redirect());
 				} else {
-					$this->Session->setFlash($this->Auth->loginError);
-					$this->redirect($this->Auth->loginAction);
+					$this->Session->setFlash('Nome de usúario ou senha não conferem!', 'default', array('class' => 'alert alert-danger'));
+					//$this->Session->setFlash($this->Auth->loginError);
+					//$this->redirect($this->Auth->loginAction);
 				}
 			}
 		}
 
 		public function logout() {
-			$this->Session->setFlash(__('Deslogado com sucesso!'), 'default', array('class' => 'success'));
+			$this->Session->setFlash(__('Deslogado com sucesso!'), 'default', array('class' => 'alert alert-success'));
 			$this->redirect($this->Auth->logout());
 		}
+		/* Fim */
 	}
 ?>

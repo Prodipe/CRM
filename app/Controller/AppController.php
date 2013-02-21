@@ -48,7 +48,8 @@ class AppController extends Controller {
                 'fields' => array(
                     'username' => 'username',
 					'password' => 'password',
-                    )
+                    ),
+					'scope' => array('Usuario.status' => 1),
                 ),
             'Form',
             );   
@@ -58,22 +59,32 @@ class AppController extends Controller {
             'controller' => 'usuarios',
             'action' => 'login',
         );
-       
+		
         $this->Auth->logoutRedirect = array(
             'plugin' => null,
             'controller' => 'usuarios',
             'action' => 'login',
         );
-     
+		
         $this->Auth->loginRedirect = array(
             'plugin' => null,
-            'controller' => 'empresas',
+            'controller' => 'usuarios',
             'action' => 'index',
         );
 
         $this->Auth->authError = 'Realize o login!';
 		$this->Auth->loginError = 'Nome de usúario ou senha não conferem!';
-		
         $this->Auth->allowedActions = array('display', 'adicionar');
+		$this->Auth->authorize = 'controller';
    }
+   
+   public function isAuthorized($user)
+   {
+		//somente o admin tem acesso a /admin/controller/action
+		if (!empty($this->request->params['admin'])) {
+			return $user['nivel_acesso'] == 1;
+		}
+		return !empty($user);
+
+	}
 }

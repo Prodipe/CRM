@@ -757,3 +757,73 @@
 #8 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(ClientesController), Object(CakeRequest), Object(CakeResponse))
 #9 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2013-02-21 11:47:49 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Usuarios\editar.ctp, line 11]
+2013-02-21 11:47:49 Error: [FatalErrorException] syntax error, unexpected ';'
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 11)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 11, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-21 14:50:08 Error: [MissingActionException] Action EmpresasController::index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-21 14:50:18 Error: [MissingActionException] Action EmpresasController::index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-21 14:50:50 Error: [MissingActionException] Action EmpresasController::index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-21 15:21:20 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 15:24:16 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 15:26:44 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 15:32:20 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 15:32:38 Error: [MissingActionException] Action UsuariosController::admin() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-21 15:33:01 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:04:11 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:04:37 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:04:42 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:04:46 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:05:00 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:05:12 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:05:16 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:13:24 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-02-21 16:18:54 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

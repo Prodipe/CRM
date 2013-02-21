@@ -15,18 +15,14 @@
 	//exit;
 ?>
 
-<!-- Verifica o status do usuário 
-		0 = 'Ativo' e 1 = 'Inativo' 
--->
+<!-- Verifica o status do usuário. 0 = 'Ativo' e 1 = 'Inativo' -->
 <?php
-/* 
 	if ($usuario['Usuario']['status'] == '0') {
-		$status = "Ativo";
-	}
-	else {
 		$status = "Inativo";
 	}
-*/	
+	else {
+		$status = "Ativo";
+	}
 ?>
 
 <p><?php echo "ID: " . $usuario['Usuario']['id']; ?></p>
@@ -35,7 +31,7 @@
 
 <p><?php echo "Nome: " . $usuario['Usuario']['nome']; ?></p>
 
-<p><?php echo "Status: " . $usuario['Usuario']['status']; //$status; ?></p>
+<p><?php echo "Status: " . $status; //$usuario['Usuario']['status']; ?></p>
 
 <p><?php echo "Empresa: " . $usuario['Empresa']['nome']; ?></p>
 
