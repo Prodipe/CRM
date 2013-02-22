@@ -45,13 +45,22 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			
 		</div>
 		<div id="content">
-				<?php echo $this->HTML->link('Empresas', array('controller' => 'empresas', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Usuários', array('controller' => 'usuarios', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Clientes', array('controller' => 'clientes', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Atendimentos', array('controller' => 'atendimentos', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Categorias', array('controller' => 'categorias', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Parâmetros', array('controller' => 'parametros', 'action' => 'index'));?>
-				<?php echo $this->HTML->link('Logout', array('controller' => 'usuarios', 'action' => 'logout'));?>
+			<?php if (AuthComponent::user('nivel_acesso') == 1) { 	
+				echo $this->HTML->link('Empresas', array('admin' => true, 'controller' => 'empresas', 'action' => 'index'));
+				echo $this->HTML->link('Usuários', array('admin' => true, 'controller' => 'usuarios', 'action' => 'index'));
+				echo $this->HTML->link('Clientes', array('admin' => false, 'controller' => 'clientes', 'action' => 'index'));
+				echo $this->HTML->link('Atendimentos', array('admin' => false, 'controller' => 'atendimentos', 'action' => 'index'));
+				echo $this->HTML->link('Categorias', array('admin' => true, 'controller' => 'categorias', 'action' => 'index'));
+				echo $this->HTML->link('Parâmetros', array('admin' => true, 'controller' => 'parametros', 'action' => 'index'));
+				echo $this->HTML->link('Logout', array('admin' => false, 'controller' => 'usuarios', 'action' => 'logout'));
+			}
+			else {
+				echo $this->HTML->link('Usuários', array('controller' => 'usuarios', 'action' => 'index'));
+				echo $this->HTML->link('Clientes', array('controller' => 'clientes', 'action' => 'index'));
+				echo $this->HTML->link('Atendimentos', array('controller' => 'atendimentos', 'action' => 'index'));
+				echo $this->HTML->link('Logout', array('controller' => 'usuarios', 'action' => 'logout'));
+			}
+			?>
 				
 				<br><br>
 				

@@ -58,7 +58,7 @@
 			<?php echo $this->HTML->link($atendimento['Cliente']['nome'], array('controller' => 'clientes', 'action' => 'ver', $atendimento['Atendimento']['cliente_id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'ver', $atendimento['Atendimento']['categoria_id'])); ?>
+			<?php echo $atendimento['Categoria']['descricao']; //$this->HTML->link($atendimento['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'ver', $atendimento['Atendimento']['categoria_id'])); ?>
 		</td>
 		<td><?php echo $atendimento['Atendimento']['protocolo']; ?></td>
 		<td><?php echo $this->Time->format('d-m-Y / H:i:s', $atendimento['Atendimento']['data_hora']); ?></td> <!-- Define o formato da data/hora -->
@@ -68,10 +68,10 @@
 		<td><?php echo $atendimento['Atendimento']['observacoes']; ?></td>
 		<td><?php echo $atendimento['Atendimento']['nota']; ?></td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $atendimento['Atendimento']['empresa_id'])); ?>
+			<?php echo $atendimento['Empresa']['nome']; //$this->HTML->link($atendimento['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $atendimento['Atendimento']['empresa_id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Usuario']['nome'], array('controller' => 'usuarios', 'action' => 'ver', $atendimento['Atendimento']['usuario_id'])); ?>
+			<?php echo $atendimento['Usuario']['nome']; //$this->HTML->link($atendimento['Usuario']['nome'], array('controller' => 'usuarios', 'action' => 'ver', $atendimento['Atendimento']['usuario_id'])); ?>
 		</td>
 		<td><?php echo $this->Html->link('Editar', array('action' => 'editar', $atendimento['Atendimento']['id'])); ?>
 			<?php echo $this->Form->postLink('Deletar',

@@ -827,3 +827,86 @@
 2013-02-21 16:18:54 Error: [MissingControllerException] Controller class AdminController could not be found.
 #0 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-02-22 07:55:49 Error: [MissingActionException] Action UsuariosController::admin_logout() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 08:24:44 Error: [MissingActionException] Action UsuariosController::admin_logout() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 08:25:37 Error: [MissingActionException] Action AtendimentosController::admin_index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(AtendimentosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 09:28:04 Error: Fatal Error (4): syntax error, unexpected 'else' (T_ELSE) in [C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Layouts\default.ctp, line 57]
+2013-02-22 09:28:04 Error: [FatalErrorException] syntax error, unexpected 'else' (T_ELSE)
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 57)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 57, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 57, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-22 09:33:32 Error: [MissingActionException] Action UsuariosController::admin_logout() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 10:10:56 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Usuarios\index.ctp, line 3]
+2013-02-22 10:10:56 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\Program File...', 3)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\Program File...', 3, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\Program File...', 3, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-02-22 10:46:58 Error: [NotFoundException] Inválido
+#0 [internal function]: UsuariosController->editar()
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(485): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-22 11:11:55 Error: [MissingActionException] Action EmpresasController::index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 11:12:52 Error: [MissingViewException] View file "C:\Program Files\EasyPHP-12.1\www\CRM\app\View\Empresas\admin_editar.ctp" is missing.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\View\View.php(473): View->_getViewFileName(NULL)
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Controller\Controller.php(956): View->render(NULL, NULL)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(193): Controller->render()
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-02-22 11:30:47 Error: [MissingActionException] Action UsuariosController::admin_editar() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 11:37:52 Error: [MissingActionException] Action CategoriasController::admin_index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(CategoriasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 12:08:34 Error: [MissingActionException] Action EmpresasController::index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 12:10:06 Error: [MissingActionException] Action EmpresasController::index() could not be found.
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(186): Controller->invokeAction(Object(CakeRequest))
+#1 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Routing\Dispatcher.php(161): Dispatcher->_invoke(Object(EmpresasController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\app\webroot\index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-02-22 17:08:44 Error: Fatal Error (1): Call to undefined method UsuariosController::isRecordOwner() in [C:\Program Files\EasyPHP-12.1\www\CRM\app\Controller\UsuariosController.php, line 10]
+2013-02-22 17:08:44 Error: [FatalErrorException] Call to undefined method UsuariosController::isRecordOwner()
+#0 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Error\ErrorHandler.php(161): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\Program File...', 10)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\Program File...', 10, Array)
+#2 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\Program File...', 10, Array)
+#3 C:\Program Files\EasyPHP-12.1\www\CRM\lib\Cake\Core\App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

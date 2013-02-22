@@ -6,7 +6,7 @@
 
 		// Override da função beforeFilter do AppController
 		public function beforeFilter() {
-			parent::beforeFilter();                     
+			parent::beforeFilter();
 		}
 		
 		public function admin_index() {
@@ -17,7 +17,7 @@
 			//$this->set('usuarios', $this->Usuario->find('all'));
 		}
 		
-		public function ver($id = null) {
+		public function admin_ver($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -31,7 +31,7 @@
 			$this->set('usuario', $usuario);
 		}
 		
-		public function adicionar() {
+		public function admin_adicionar() {
 			// Array com o nome das empresas
 			$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 		
@@ -39,14 +39,14 @@
 				$this->Usuario->create();
 				if ($this->Usuario->save($this->request->data)) {
 					$this->Session->setFlash(__('Usuário cadastrado com sucesso!'), 'default', array('class' => 'success'));
-					$this->redirect(array('action' => 'login'));
+					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash('Erro durante o cadastro de usuário!');
 				}
 			}
 		}
 		
-		public function editar($id = null) {
+		public function admin_editar($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -72,7 +72,40 @@
 			}
 		}
 		
-		public function deletar($id) {
+		public function editar($id = null) {
+			if (!$id) {
+				throw new NotFoundException(__('Inválido'));
+			}
+			$usuario = $this->Usuario->findById($id);
+			if (!$usuario) {
+				throw new NotFoundException(__('Inválido'));
+			}
+			//if (($usuario['Usuario']['nivel_acesso'] != 1) && ($usuario['Usuario']['id'] == $id)) {
+				//$this->set('usuario', $usuario);
+				
+				// Array com o nome das empresas
+				$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
+				
+				if ($this->request->is('post') || $this->request->is('put')) {
+					$this->Usuario->id = $id;
+					if ($this->Usuario->save($this->request->data)) {
+						$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'success'));
+						$this->redirect(array('action' => 'index'));
+					} else {
+						$this->Session->setFlash('As informações não foram atualizadas');
+					}
+				}
+				if (!$this->request->data) {
+					$this->request->data = $usuario;
+				}
+			//}
+			//else {
+				//$this->Session->setFlash('Sem permissão');
+				//$this->redirect(array('action' => 'index'));
+			//}
+		}
+		
+		public function admin_deletar($id) {
 			if ($this->request->is('get')) {
 				throw new MethodNotAllowedException();
 			}
@@ -86,7 +119,7 @@
 		}
 		
 		// Ordenar os usuários
-		public function ordenar($tipo) {
+		public function admin_ordenar($tipo) {
 			if ($tipo == 'nome') {
 				$this->set('usuarios', $this->Usuario->find('all', array('order' => array('Usuario.nome' => 'ASC'))));
 			}
@@ -106,7 +139,7 @@
 			$this->set('title_for_layout', __('Log in'));
 			if ($this->request->is('post')) {
 				if ($this->Auth->login()) {
-					if ($this->Auth->user('nivel_acesso') == 1) {
+					if ($this->Auth->user('nivel_acesso')) {
 						return $this->redirect(array(
 							'admin' => true,
                             'controller' => 'usuarios',

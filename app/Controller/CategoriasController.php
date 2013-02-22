@@ -2,11 +2,11 @@
 	class CategoriasController extends AppController {
 		public $helpers = array('Html', 'Form');
 		
-		public function index() {
+		public function admin_index() {
 			$this->set('categorias', $this->Categoria->find('all'));
 		}
 		
-		public function ver($id = null) {
+		public function admin_ver($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -20,7 +20,7 @@
 			$this->set('categoria', $categoria);
 		}
 		
-		public function adicionar() {
+		public function admin_adicionar() {
 			if ($this->request->is('post')) {
 				$this->Categoria->create();
 				if ($this->Categoria->save($this->request->data)) {
@@ -32,7 +32,7 @@
 			}
 		}
 		
-		public function editar($id = null) {
+		public function admin_editar($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -56,7 +56,7 @@
 			}
 		}
 		
-		public function deletar($id) {
+		public function admin_deletar($id) {
 			if ($this->request->is('get')) {
 				throw new MethodNotAllowedException();
 			}
@@ -68,7 +68,7 @@
 		}
 		
 		// Ordenar as categorias
-		public function ordenar($tipo) {
+		public function admin_ordenar($tipo) {
 			if ($tipo == 'id') {
 				$this->set('categorias', $this->Categoria->find('all', array('order' => array('Categoria.id' => 'ASC'))));
 			}

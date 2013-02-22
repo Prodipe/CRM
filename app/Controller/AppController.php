@@ -65,13 +65,13 @@ class AppController extends Controller {
             'controller' => 'usuarios',
             'action' => 'login',
         );
-		
+		/*
         $this->Auth->loginRedirect = array(
             'plugin' => null,
             'controller' => 'usuarios',
             'action' => 'index',
         );
-
+		*/
         $this->Auth->authError = 'Realize o login!';
 		$this->Auth->loginError = 'Nome de usúario ou senha não conferem!';
         $this->Auth->allowedActions = array('display', 'adicionar');
@@ -87,4 +87,13 @@ class AppController extends Controller {
 		return !empty($user);
 
 	}
+	
+	/*
+	public function isRecordOwner($model, $id) {
+		$record = $this->{$model}->find(array("$model.id" => $id));
+		if ($record[$model]['id'] != $this->Auth->user('id')) {
+			$this->Session->setFlash('Você não tem permissão!');
+			$this->redirect(array('action' => 'index'));
+		}
+	}*/
 }

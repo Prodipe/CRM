@@ -2,11 +2,11 @@
 	class EmpresasController extends AppController {
 		public $helpers = array('Html', 'Form');
 
-		public function index() {
+		public function admin_index() {
 			$this->set('empresas', $this->Empresa->find('all'));
 		}
 		
-		public function ver($id = null) {
+		public function admin_ver($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -20,7 +20,7 @@
 			$this->set('empresa', $empresa);
 		}
 		
-		public function adicionar() {
+		public function admin_adicionar() {
 			if ($this->request->is('post')) {
 				$this->Empresa->create();
 				if ($this->Empresa->save($this->request->data)) {
@@ -32,7 +32,7 @@
 			}
 		}
 		
-		public function editar($id = null) {
+		public function admin_editar($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -57,7 +57,7 @@
 			}
 		}
 		
-		public function deletar($id) {
+		public function admin_deletar($id) {
 			if ($this->request->is('get')) {
 				throw new MethodNotAllowedException();
 			}
@@ -71,7 +71,7 @@
 		}
 		
 		// Ordenar as empresas
-		public function ordenar($tipo) {
+		public function admin_ordenar($tipo) {
 			if ($tipo == 'nome') {
 				$this->set('empresas', $this->Empresa->find('all', array('order' => array('Empresa.nome' => 'ASC'))));
 			}
