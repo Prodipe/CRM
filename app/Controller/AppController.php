@@ -87,13 +87,4 @@ class AppController extends Controller {
 		return !empty($user);
 
 	}
-	
-	/*
-	public function isRecordOwner($model, $id) {
-		$record = $this->{$model}->find(array("$model.id" => $id));
-		if ($record[$model]['id'] != $this->Auth->user('id')) {
-			$this->Session->setFlash('Você não tem permissão!');
-			$this->redirect(array('action' => 'index'));
-		}
-	}*/
 }

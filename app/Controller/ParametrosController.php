@@ -2,11 +2,11 @@
 	class ParametrosController extends AppController {
 		public $helpers = array('Html', 'Form');
 		
-		public function index() {
+		public function admin_index() {
 			$this->set('parametros', $this->Parametro->find('all'));
 		}
 		
-		public function ver($id = null) {
+		public function admin_ver($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -20,7 +20,7 @@
 			$this->set('parametro', $parametro);
 		}
 		
-		public function adicionar() {
+		public function admin_adicionar() {
 			// Array com o nome das empresas
 			$this->set('empresa', $this->Parametro->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 			
@@ -35,7 +35,7 @@
 			}
 		}
 		
-		public function editar($id = null) {
+		public function admin_editar($id = null) {
 			if (!$id) {
 				throw new NotFoundException(__('Inválido'));
 			}
@@ -63,7 +63,7 @@
 			}
 		}
 		
-		public function deletar($id) {
+		public function admin_deletar($id) {
 			if ($this->request->is('get')) {
 				throw new MethodNotAllowedException();
 			}
@@ -77,7 +77,7 @@
 		}
 		
 		// Ordenar os parâmetros
-		public function ordenar($tipo) {
+		public function admin_ordenar($tipo) {
 			if ($tipo == 'id') {
 				$this->set('parametros', $this->Parametro->find('all', array('order' => array('Parametro.id' => 'ASC'))));
 			}

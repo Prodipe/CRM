@@ -29,6 +29,9 @@
 			}
 			
 			$this->set('usuario', $usuario);
+			
+			// Array com os atendimentos de um determinado usuário
+			$this->set('atendimentos', $this->Usuario->Atendimento->find('all', array('conditions' => array('Atendimento.usuario_id' => $id))));
 		}
 		
 		public function admin_adicionar() {
@@ -48,27 +51,56 @@
 		
 		public function admin_editar($id = null) {
 			if (!$id) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			$usuario = $this->Usuario->findById($id);
 			if (!$usuario) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
-			
-			// Array com o nome das empresas
-			$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
-			
-			if ($this->request->is('post') || $this->request->is('put')) {
-				$this->Usuario->id = $id;
-				if ($this->Usuario->save($this->request->data)) {
-					$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'success'));
-					$this->redirect(array('action' => 'index'));
-				} else {
-					$this->Session->setFlash('As informações não foram atualizadas');
+			// Verifica se o usuário não é administrador
+			// Um administrador só pode editar informações de usuários comuns ou de si próprio
+			if ($usuario['Usuario']['nivel_acesso'] != 1) {
+				// Array com o nome das empresas
+				$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
+				$this->set('usuario', $usuario);
+				
+				if ($this->request->is('post') || $this->request->is('put')) {
+					$this->Usuario->id = $id;
+					if ($this->Usuario->save($this->request->data)) {
+						$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'success'));
+						$this->redirect(array('action' => 'index'));
+					} else {
+						$this->Session->setFlash('As informações não foram atualizadas');
+					}
+				}
+				if (!$this->request->data) {
+					$this->request->data = $usuario;
 				}
 			}
-			if (!$this->request->data) {
-				$this->request->data = $usuario;
+			// Verifica se o usuário é o mesmo que está logado
+			// O usuário só pode editar informações referentes a si próprio
+			else if ($id == $this->Auth->user('id')) {
+				$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
+				$this->set('usuario', $usuario);
+				
+				if ($this->request->is('post') || $this->request->is('put')) {
+					$this->Usuario->id = $id;
+					if ($this->Usuario->save($this->request->data)) {
+						$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'success'));
+						$this->redirect(array('action' => 'index'));
+					} else {
+						$this->Session->setFlash('As informações não foram atualizadas');
+					}
+				}
+				if (!$this->request->data) {
+					$this->request->data = $usuario;
+				}
+			}
+			else {
+				$this->Session->setFlash('Você não tem permissão!');
+				$this->redirect(array('action' => 'index'));
 			}
 		}
 		
@@ -80,9 +112,9 @@
 			if (!$usuario) {
 				throw new NotFoundException(__('Inválido'));
 			}
-			//if (($usuario['Usuario']['nivel_acesso'] != 1) && ($usuario['Usuario']['id'] == $id)) {
-				//$this->set('usuario', $usuario);
-				
+			// Verifica se o usuário é o mesmo que está logado
+			// O usuário só pode editar informações referentes a si próprio
+			if ($id == $this->Auth->user('id')) {
 				// Array com o nome das empresas
 				$this->set('empresa', $this->Usuario->Empresa->find('list', array('fields' => array('Empresa.nome'))));
 				
@@ -98,11 +130,11 @@
 				if (!$this->request->data) {
 					$this->request->data = $usuario;
 				}
-			//}
-			//else {
-				//$this->Session->setFlash('Sem permissão');
-				//$this->redirect(array('action' => 'index'));
-			//}
+			}
+			else {
+				$this->Session->setFlash('Você não tem permissão!');
+				$this->redirect(array('action' => 'index'));
+			}
 		}
 		
 		public function admin_deletar($id) {
@@ -131,6 +163,32 @@
 			}
 			if ($tipo == 'status') {
 				$this->set('usuarios', $this->Usuario->find('all', array('order' => array('Usuario.status' => 'ASC'))));
+			}
+		}
+		
+		public function mudar_senha() {
+			$id = $this->Auth->user('id');
+			$usuario = $this->Usuario->findById($id);
+			if (!$usuario) {
+				$this->redirect(array('action' => 'index'));
+				throw new NotFoundException(__('Inválido'));
+			}
+			if ($this->request->is('post') || $this->request->is('put')) {
+				$this->Usuario->id = $id;
+				if ($this->Usuario->save($this->request->data)) {
+					$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'success'));
+					/*if ($this->Auth->user('nivel_acesso' != 1)) {
+						$this->redirect(array('action' => 'index'));
+					}
+					else {
+						$this->redirect(array('admin' => true, 'action' => 'index'));
+					}*/
+				} else {
+					$this->Session->setFlash('As informações não foram atualizadas');
+				}
+			}
+			if (!$this->request->data) {
+				$this->request->data = $usuario;
 			}
 		}
 		

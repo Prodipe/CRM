@@ -2,4 +2,4 @@
 
 <p><?php echo $this->HTML->link('Editar informações', array('admin' => false, 'controller' => 'usuarios', 'action' => 'editar', AuthComponent::user('id'))); ?></p>
 
-<p><?php echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => '')); ?></p>
+<p><?php echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => 'mudar_senha')); ?></p>

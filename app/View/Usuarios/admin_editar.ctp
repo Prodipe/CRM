@@ -19,5 +19,16 @@
 	//echo $this->Form->select('empresa_id', $empresa);
 	echo $this->Form->input('empresa_id', array('options' => $empresa, 'empty' => '(Escolha um)'));
     echo $this->Form->input('id', array('type' => 'hidden'));
-    echo $this->Form->end('Salvar');
-?>
+?>	
+
+<!-- Torna um usuário comum que já está ativo em administrador -->
+
+<?php if (($usuario['Usuario']['status'] == 1) && ($usuario['Usuario']['nivel_acesso'] != 1)) { ?>
+
+	<h2><?php echo "Tornar usuário administrador"; ?></h2>
+    
+	<?php echo $this->Form->checkbox('nivel_acesso', array('value' => 1)); ?>
+	
+<?php } ?>
+
+<?php echo $this->Form->end('Salvar'); ?>
