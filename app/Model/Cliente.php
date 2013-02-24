@@ -4,6 +4,9 @@
 		public $belongsTo = 'Empresa';
 		public $hasMany = 'Atendimento';
 		
+		// Define a busca
+		public $actsAs = array('Search.Searchable');
+		
 		// Verifica os campos que não podem ficar vazios
 		public $validate = array(
 			'nome' => array(
@@ -35,5 +38,11 @@
 				'message' => 'Preencha o campo'
 			),
 		);
+		
+		// Critérios de busca
+		public $filterArgs = array(
+			'nome' => array('type' => 'like')
+		);
+
 	}
 ?>

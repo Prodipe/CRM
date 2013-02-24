@@ -1,9 +1,21 @@
 ﻿<?php
 	class ClientesController extends AppController {
 		public $helpers = array('Html', 'Form');
+		public $components = array('Search.Prg');
+		
+		// Utiliza os critérios de busca definidos no model
+		public $presetVars = true;
+		
+		// Paginação
+		public $paginate = array(
+			'limit' => 5,
+			'order' => array('Cliente.nome' => 'asc')
+		);
 		
 		public function index() {
-			$this->set('clientes', $this->Cliente->find('all'));
+			$clientes = $this->paginate('Cliente');
+			$this->set('clientes', $clientes);
+			//$this->set('clientes', $this->Cliente->find('all'));
 		}
 		
 		public function ver($id = null) {
@@ -104,6 +116,13 @@
 					$this->Session->setFlash('O atendimento do cliente não foi adicionado');
 				}
 			}
+		}
+		
+		// Pesquisar por clientes
+		public function buscar() {
+			$this->Prg->commonProcess();
+			$this->paginate['conditions'] = $this->Cliente->parseCriteria($this->passedArgs);
+			$this->set('clientes', $this->paginate());
 		}
 		
 		// Ordenar os clientes

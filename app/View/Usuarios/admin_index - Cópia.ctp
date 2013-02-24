@@ -1,6 +1,10 @@
-﻿<h3>Usuários Cadastrados</h3>
+﻿<p><?php echo $this->HTML->link('Editar informações', array('controller' => 'usuarios', 'action' => 'editar', AuthComponent::user('id'))); ?></p>
 
-<?php //echo $this->Html->link('Adicionar um usuário', array('controller' => 'usuarios', 'action' => 'adicionar')); ?>
+<p><?php echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => 'mudar_senha')); ?></p>
+
+<h3>Usuários Cadastrados</h3>
+
+<?php echo $this->Html->link('Adicionar um usuário', array('controller' => 'usuarios', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>
@@ -13,7 +17,7 @@
     </tr>
 
     <?php foreach ($usuarios as $usuario): ?>
-	
+	<?php //if ($usuario['Usuario']['nivel_acesso'] != 1) { // Mostra somente os usuários comuns ?>
 	<!-- Verifica o status do usuário. 0 = 'Ativo' e 1 = 'Inativo' -->
 	<?php 
 		if ($usuario['Usuario']['status'] == '0') {
@@ -43,6 +47,7 @@
             ?>
 		</td>
     </tr>
+	<?php //} ?>
     <?php endforeach; ?>
     <?php unset($usuario); ?>
 </table>

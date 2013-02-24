@@ -3,14 +3,24 @@
 		public $helpers = array('Html', 'Form');
 		public $name = 'Usuarios';
         public $uses = array('Usuario');
-
+		
+		// Paginação
+		public $paginate = array(
+			'limit' => 5,
+			'order' => array('Usuario.nome' => 'asc')
+		);
+		
 		// Override da função beforeFilter do AppController
 		public function beforeFilter() {
 			parent::beforeFilter();
 		}
 		
 		public function admin_index() {
-			$this->set('usuarios', $this->Usuario->find('all'));
+			// Somente os usuários comuns com nível de acesso igual a 0
+			$this->paginate['Usuario']['conditions'] = array('Usuario.nivel_acesso' => 0);
+			$this->set('usuarios', $this->paginate());
+			
+			//$this->set('usuarios', $this->Usuario->find('all', array('conditions' => array('Usuario.nivel_acesso' => 0))));
 		}
 		
 		public function index() {

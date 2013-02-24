@@ -1,24 +1,35 @@
-﻿<p><?php echo $this->Html->link('Pesquisar clientes', array('controller' => 'clientes', 'action' => 'buscar')); ?></p>
-
-<h3>Clientes Cadastrados</h3>
+﻿<h3>Clientes Cadastrados</h3>
 
 <?php echo $this->Html->link('Adicionar um cliente', array('controller' => 'clientes', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>
         <!--<th>Id</th>-->
-        <th><?php echo $this->Paginator->sort('nome', 'Nome');?></th>
-        <th><?php echo $this->Paginator->sort('matricula', 'Matrícula');?></th>
-		<th><?php echo $this->Paginator->sort('status', 'Status');?></th>
-		<th><?php echo $this->Paginator->sort('data_cadastro', 'Data de Cadastro');?></th>
-		<th><?php echo $this->Paginator->sort('email', 'Email');?></th>
-		<th><?php echo $this->Paginator->sort('telefone1', 'Telefone 1');?></th>
-		<th><?php echo $this->Paginator->sort('telefone2', 'Telefone 2');?></th>
+        <th><?php echo $this->Html->link('Nome', array('action' => 'ordenar', 'nome'));?></th>
+        <th><?php echo $this->Html->link('Matrícula', array('action' => 'ordenar', 'matricula'));?></th>
+		<th><?php echo $this->Html->link('Status', array('action' => 'ordenar', 'status'));?></th>
+		<th><?php echo $this->Html->link('Data de Cadastro', array('action' => 'ordenar', 'data_cadastro'));?></th>
+		<th><?php echo $this->Html->link('Email', array('action' => 'ordenar', 'email'));?></th>
+		<th><?php echo $this->Html->link('Telefone 1', array('action' => 'ordenar', 'telefone1'));?></th>
+		<th><?php echo $this->Html->link('Telefone 2', array('action' => 'ordenar', 'telefone2'));?></th>
 		<th>Empresa</th>
-		<th>Ações</th>
     </tr>
 
     <?php foreach ($clientes as $cliente): ?>
+	
+	<!-- Verifica o status do cliente 
+			0 = 'Ativo' e 1 = 'Inativo' 
+	-->
+	<?php
+		/*
+		if ($cliente['Cliente']['status'] == '0') {
+			$status = "Ativo";
+		}
+		else {
+			$status = "Inativo";
+		}
+		*/
+	?>
 	
     <tr>
         <!--<td><?php //echo $cliente['Cliente']['id']; ?></td>-->
@@ -45,16 +56,3 @@
     <?php endforeach; ?>
     <?php unset($cliente); ?>
 </table>
- 
-<!-- Paginação -->
-<div class="paging">
-	<!-- Mostra número de páginas -->
-	<?php echo $this->Paginator->numbers();?>
-
-	<!-- Mostra os links anterior e próximo -->
-	<?php echo $this->Paginator->prev('« Anterior', null, null, array('class' => 'disabled'));?>
-	<?php echo $this->Paginator->next('Próximo »', null, null, array('class' => 'disabled'));?>
-
-	<!-- Formato: página X de Y, W resultados de um total de Z -->
-	<p><?php echo $this->Paginator->counter(array('format' => 'Página {:page} de {:pages}, mostrando {:current} resultados de um total de {:count}'));?></p>
- </div>

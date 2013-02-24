@@ -1,8 +1,9 @@
-﻿<p><?php echo $this->Html->link('Pesquisar clientes', array('controller' => 'clientes', 'action' => 'buscar')); ?></p>
-
-<h3>Clientes Cadastrados</h3>
-
-<?php echo $this->Html->link('Adicionar um cliente', array('controller' => 'clientes', 'action' => 'adicionar')); ?>
+﻿<fieldset>
+	<?php echo $this->Form->create('Cliente', array('url' => array_merge(array('action' => 'buscar'), $this->params['pass']))); ?>
+	<?php echo $this->Form->input('nome', array('div' => false));?>
+	<?php echo $this->Form->submit(__('Buscar'), array('div' => false));?>
+	<?php echo $this->Form->end();?>
+</fieldset>
 
 <table>
     <tr>

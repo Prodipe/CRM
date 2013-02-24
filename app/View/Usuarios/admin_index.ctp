@@ -9,15 +9,15 @@
 <table>
     <tr>
         <!--<th>Id</th>-->
-		<th><?php echo $this->Html->link('Login', array('action' => 'ordenar', 'login'));?></th>
-        <th><?php echo $this->Html->link('Nome', array('action' => 'ordenar', 'nome'));?></th>
-        <th><?php echo $this->Html->link('Matrícula', array('action' => 'ordenar', 'matricula'));?></th>
-		<th><?php echo $this->Html->link('Status', array('action' => 'ordenar', 'status'));?></th>
+		<th><?php echo $this->Paginator->sort('username', 'Login');?></th>
+        <th><?php echo $this->Paginator->sort('nome', 'Nome');?></th>
+        <th><?php echo $this->Paginator->sort('matricula', 'Matrícula');?></th>
+		<th><?php echo $this->Paginator->sort('status', 'Status');?></th>
 		<th>Empresa</th>
+		<th>Ações</th>
     </tr>
 
     <?php foreach ($usuarios as $usuario): ?>
-	<?php if ($usuario['Usuario']['nivel_acesso'] != 1) { // Mostra somente os usuários comuns ?>
 	<!-- Verifica o status do usuário. 0 = 'Ativo' e 1 = 'Inativo' -->
 	<?php 
 		if ($usuario['Usuario']['status'] == '0') {
@@ -47,7 +47,19 @@
             ?>
 		</td>
     </tr>
-	<?php } ?>
     <?php endforeach; ?>
     <?php unset($usuario); ?>
 </table>
+
+<!-- Paginação -->
+<div class="paging">
+	<!-- Mostra número de páginas -->
+	<?php echo $this->Paginator->numbers();?>
+
+	<!-- Mostra os links anterior e próximo -->
+	<?php echo $this->Paginator->prev('« Anterior', null, null, array('class' => 'disabled'));?>
+	<?php echo $this->Paginator->next('Próximo »', null, null, array('class' => 'disabled'));?>
+
+	<!-- Formato: página X de Y, W resultados de um total de Z -->
+	<p><?php echo $this->Paginator->counter(array('format' => 'Página {:page} de {:pages}, mostrando {:current} resultados de um total de {:count}'));?></p>
+ </div>
