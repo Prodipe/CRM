@@ -1,9 +1,23 @@
 ﻿<?php
 	class AtendimentosController extends AppController {
 		public $helpers = array('Html', 'Form');
+		public $components = array('Search.Prg');
+		
+		// Utiliza os critérios de busca definidos no model
+		public $presetVars = true;
+		
+		// Paginação
+		public $paginate = array(
+			'limit' => 5,
+			'order' => array('Atendimento.id' => 'asc')
+		);
 		
 		public function index() {
-			$this->set('atendimentos', $this->Atendimento->find('all'));
+			//$this->set('atendimentos', $this->Atendimento->find('all'));
+			
+			$this->Prg->commonProcess();
+			$this->paginate['conditions'] = $this->Atendimento->parseCriteria($this->passedArgs);
+			$this->set('atendimentos', $this->paginate());
 		}
 		
 		public function ver($id = null) {

@@ -41,7 +41,12 @@
 		
 		// Critérios de busca
 		public $filterArgs = array(
-			'nome' => array('type' => 'like')
+			'nome' => array('type' => 'like'),
+			'username' => array('type' => 'like'),
+			'matricula' => array('type' => 'like'),
+			'status' => array('type' => 'like'),
+			'email' => array('type' => 'like'),
+			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome'))
 		);
 
 	}

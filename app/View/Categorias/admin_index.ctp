@@ -6,6 +6,7 @@
     <tr>
         <th><?php echo $this->Html->link('Id', array('action' => 'ordenar', 'id'));?></th>
         <th><?php echo $this->Html->link('Descrição', array('action' => 'ordenar', 'descricao'));?></th>
+		<th>Ações</th>
     </tr>
 
     <?php foreach ($categorias as $categoria): ?>

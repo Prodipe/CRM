@@ -4,6 +4,9 @@
 		//public $hasMany = 'Categoria';
 		public $belongsTo = array('Empresa', 'Usuario', 'Cliente', 'Categoria');
 		
+		// Define a busca
+		public $actsAs = array('Search.Searchable');
+		
 		// Verifica os campos que não podem ficar vazios
 		public $validate = array(
 			'protocolo' => array('rule' => 'notEmpty', 'message' => 'Preencha o campo'),
@@ -16,6 +19,18 @@
 			'usuario_id' => array('rule' => 'notEmpty', 'message' => 'Preencha o campo'),
 			'cliente_id' => array('rule' => 'notEmpty', 'message' => 'Preencha o campo'),
 			'categoria_id' => array('rule' => 'notEmpty', 'message' => 'Preencha o campo'),
+		);
+		
+		// Critérios de busca
+		public $filterArgs = array(
+			'protocolo' => array('type' => 'like'),
+			'plano_atendimento' => array('type' => 'like'),
+			'observacoes' => array('type' => 'like'),
+			'nota' => array('type' => 'value'),
+			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome')),
+			'usuario' => array('type' => 'like', 'field' => array('Usuario.nome')),
+			'cliente' => array('type' => 'like', 'field' => array('Cliente.nome')),
+			'categoria' => array('type' => 'like', 'field' => array('Categoria.descricao'))
 		);
 	}
 ?>

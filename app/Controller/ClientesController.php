@@ -8,14 +8,19 @@
 		
 		// Paginação
 		public $paginate = array(
-			'limit' => 5,
+			'limit' => 10,
 			'order' => array('Cliente.nome' => 'asc')
 		);
 		
 		public function index() {
-			$clientes = $this->paginate('Cliente');
-			$this->set('clientes', $clientes);
 			//$this->set('clientes', $this->Cliente->find('all'));
+			
+			//$clientes = $this->paginate('Cliente');
+			//$this->set('clientes', $clientes);
+			
+			$this->Prg->commonProcess();
+			$this->paginate['conditions'] = $this->Cliente->parseCriteria($this->passedArgs);
+			$this->set('clientes', $this->paginate());
 		}
 		
 		public function ver($id = null) {

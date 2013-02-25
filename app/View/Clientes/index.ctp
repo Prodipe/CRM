@@ -1,4 +1,20 @@
-﻿<p><?php echo $this->Html->link('Pesquisar clientes', array('controller' => 'clientes', 'action' => 'buscar')); ?></p>
+﻿<fieldset>
+	<legend>Pesquisa</legend>
+	<?php echo $this->Form->create('Cliente', array('url' => array_merge(array('action' => 'index'), $this->params['pass']))); ?>
+	<?php echo $this->Form->input('nome', array('div' => false, 'label' => 'Nome'));?>
+	<?php echo $this->Form->input('username', array('div' => false, 'label' => 'Nome de usuário'));?>
+	<?php echo $this->Form->input('matricula', array('div' => false, 'label' => 'Matrícula'));?>
+	
+	<?php $options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
+	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'multiple' => 'select', 'options' => $options));?>
+	
+	<?php echo $this->Form->input('email', array('div' => false, 'label' => 'Email'));?>
+	<?php echo $this->Form->input('empresa', array('div' => false, 'label' => 'Empresa'));?>
+	<?php echo $this->Form->submit(__('Buscar'), array('div' => false));?>
+	<?php echo $this->Form->end();?>
+</fieldset>
+
+<p><?php echo $this->Html->link('Pesquisar clientes', array('controller' => 'clientes', 'action' => 'buscar')); ?></p>
 
 <h3>Clientes Cadastrados</h3>
 

@@ -8,6 +8,7 @@
         <th><?php echo $this->Html->link('Descrição', array('action' => 'ordenar', 'descricao'));?></th>
         <th><?php echo $this->Html->link('Valor', array('action' => 'ordenar', 'valor'));?></th>
 		<th>Empresa</th>
+		<th>Ações</th>
     </tr>
 
     <?php foreach ($parametros as $parametro): ?>

@@ -7,6 +7,7 @@
         <!--<th>Id</th>-->
         <th><?php echo $this->Html->link('Nome', array('action' => 'ordenar', 'nome'));?></th>
         <th><?php echo $this->Html->link('Razão Social', array('action' => 'ordenar', 'razao'));?></th>
+		<th>Ações</th>
     </tr>
 
     <?php foreach ($empresas as $empresa): ?>

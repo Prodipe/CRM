@@ -1,41 +1,21 @@
-﻿<fieldset>
-	<legend>Pesquisa</legend>
-	<?php echo $this->Form->create('Atendimento', array('url' => array_merge(array('action' => 'index'), $this->params['pass']))); ?>
-	<?php echo $this->Form->input('protocolo', array('div' => false, 'label' => 'Protocolo'));?>
-	<?php echo $this->Form->input('plano_atendimento', array('div' => false, 'label' => 'Plano de atendimento'));?>
-	<?php echo $this->Form->input('observacoes', array('div' => false, 'label' => 'Observações'));?>
-	
-	<?php //$options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
-	<?php //echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'multiple' => 'checkbox', 'options' => $options));?>
-	
-	<?php echo $this->Form->input('nota', array('div' => false, 'label' => 'Nota recebida'));?>
-	<?php echo $this->Form->input('empresa', array('div' => false, 'label' => 'Empresa'));?>
-	<?php echo $this->Form->input('cliente', array('div' => false, 'label' => 'Cliente'));?>
-	<?php echo $this->Form->input('usuario', array('div' => false, 'label' => 'Usuário'));?>
-	<?php echo $this->Form->input('categoria', array('div' => false, 'label' => 'Categoria'));?>
-	<?php echo $this->Form->submit(__('Buscar'), array('div' => false));?>
-	<?php echo $this->Form->end();?>
-</fieldset>
-
-<h3>Atendimentos Cadastrados</h3>
+﻿<h3>Atendimentos Cadastrados</h3>
 
 <?php echo $this->Html->link('Adicionar um atendimento', array('controller' => 'atendimentos', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>
-		<th><?php echo$this->Paginator->sort('id', 'ID');?></th>
+		<th><?php echo $this->Html->link('Id', array('action' => 'ordenar', 'id'));?></th>
 		<th>Cliente</th>
 		<th>Categoria</th>
-        <th><?php echo $this->Paginator->sort('protocolo', 'Protocolo');?></th>
-        <th><?php echo $this->Paginator->sort('data_hora', 'Data/Hora');?></th>
-		<th><?php echo $this->Paginator->sort('status', 'Status');?></th>
-		<th><?php echo $this->Paginator->sort('prioridade', 'Prioridade');?></th>
-		<th><?php echo $this->Paginator->sort('plano_atendimento', 'Plano');?></th>
+        <th><?php echo $this->Html->link('Protocolo', array('action' => 'ordenar', 'protocolo'));?></th>
+        <th><?php echo $this->Html->link('Data/Hora', array('action' => 'ordenar', 'data'));?></th>
+		<th><?php echo $this->Html->link('Status', array('action' => 'ordenar', 'status'));?></th>
+		<th><?php echo $this->Html->link('Prioridade', array('action' => 'ordenar', 'prioridade'));?></th>
+		<th><?php echo $this->Html->link('Plano', array('action' => 'ordenar', 'plano'));?></th>
 		<th>Observações</th>
-		<th><?php echo $this->Paginator->sort('nota', 'Nota Recebida');?></th>
+		<th><?php echo $this->Html->link('Nota Recebida', array('action' => 'ordenar', 'nota'));?></th>
 		<th>Empresa</th>
 		<th>Usuário</th>
-		<th>Ações</th>
     </tr>
 
     <?php foreach ($atendimentos as $atendimento): ?>
