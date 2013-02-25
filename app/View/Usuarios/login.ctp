@@ -6,5 +6,5 @@
     echo $this->Form->input('username', array('label' => 'Nome de usuário'));
     echo $this->Form->input('password', array('label' => 'Senha'));
     echo $this->Form->end('Entrar');
-	echo $this->HTML->link('Não é cadastrado?', array('controller' => 'usuarios', 'action' => 'adicionar'));
+	//echo $this->HTML->link('Não é cadastrado?', array('controller' => 'usuarios', 'action' => 'adicionar'));
 ?>

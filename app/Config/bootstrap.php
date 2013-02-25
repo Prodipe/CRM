@@ -143,6 +143,7 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 	CakePlugin::load('Search');
+	CakePlugin::load('ReportManager',array('bootstrap' => true));
 
 /**
  * You can attach event listeners to the request lifecyle as Dispatcher Filter . By Default CakePHP bundles two filters:
@@ -183,3 +184,9 @@ CakeLog::config('error', array(
 // Traduzir meses para o português brasileiro
 // A seguinte linha pode ser incluída no arquivo /Config/core.php ou /Config/bootstrap.php
 Configure::write('Config.language', 'br');
+
+// Report
+Configure::write('Dispatcher.filters', array(  
+    'AssetDispatcher',  
+    'CacheDispatcher'  
+));

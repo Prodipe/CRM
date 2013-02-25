@@ -8,7 +8,7 @@
 		
 		// Paginação
 		public $paginate = array(
-			'limit' => 10,
+			'limit' => 5,
 			'order' => array('Cliente.nome' => 'asc')
 		);
 		

@@ -1,20 +1,5 @@
 ﻿<h3>Usuário</h3>
 
-<?php
-/*
-	$count = count($empresa);
-	for ($i = 1; $i <= $count; $i++) {
-		echo $empresa[$i];
-	}
-	exit;
-*/
-?>
-
-<?php 
-	//echo ($usuario['Empresa']['nome']);
-	//exit;
-?>
-
 <!-- Verifica o status do usuário. 0 = 'Ativo' e 1 = 'Inativo' -->
 <?php
 	if ($usuario['Usuario']['status'] == '0') {
@@ -40,7 +25,7 @@
 
 <table>
 	<tr>
-		<th>Id</th>
+		<th>ID</th>
 		<th>Cliente</th>
 		<th>Categoria</th>
         <th>Protocolo</th>
@@ -51,6 +36,7 @@
 		<th>Observações</th>
 		<th>Nota Recebida</th>
 		<th>Empresa</th>
+		<th>Ações</th>
     </tr>
 	<?php foreach ($atendimentos as $atendimento): ?>
 

@@ -18,6 +18,7 @@
 			$this->Prg->commonProcess();
 			$this->paginate['conditions'] = $this->Atendimento->parseCriteria($this->passedArgs);
 			$this->set('atendimentos', $this->paginate());
+			$this->set('categorias', $this->Atendimento->Categoria->find('list', array('fields' => array('Categoria.descricao'))));
 		}
 		
 		public function ver($id = null) {

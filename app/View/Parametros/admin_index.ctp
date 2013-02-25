@@ -4,7 +4,7 @@
 
 <table>
     <tr>
-        <th><?php echo $this->Html->link('Id', array('action' => 'ordenar', 'id'));?></th>
+        <th><?php echo $this->Html->link('ID', array('action' => 'ordenar', 'id'));?></th>
         <th><?php echo $this->Html->link('Descrição', array('action' => 'ordenar', 'descricao'));?></th>
         <th><?php echo $this->Html->link('Valor', array('action' => 'ordenar', 'valor'));?></th>
 		<th>Empresa</th>

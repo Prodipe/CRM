@@ -6,7 +6,7 @@
 		
 		// Paginação
 		public $paginate = array(
-			'limit' => 5,
+			'limit' => 20,
 			'order' => array('Usuario.nome' => 'asc')
 		);
 		
@@ -42,6 +42,10 @@
 			
 			// Array com os atendimentos de um determinado usuário
 			$this->set('atendimentos', $this->Usuario->Atendimento->find('all', array('conditions' => array('Atendimento.usuario_id' => $id))));
+			
+			//$atend = $this->Usuario->Atendimento->find('all', array('conditions' => array('Atendimento.usuario_id' => $id)));
+			//$this->paginate['conditions'] = $atend;
+			//$this->set('atendimentos', $this->paginate());
 		}
 		
 		public function admin_adicionar() {

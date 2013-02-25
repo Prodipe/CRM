@@ -30,7 +30,17 @@
 			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome')),
 			'usuario' => array('type' => 'like', 'field' => array('Usuario.nome')),
 			'cliente' => array('type' => 'like', 'field' => array('Cliente.nome')),
-			'categoria' => array('type' => 'like', 'field' => array('Categoria.descricao'))
+			//'categoria' => array('type' => 'like', 'field' => array('Categoria.descricao'))
+			'categoria' => array('type' => 'query', 'method' => 'buscaCategoria', 'field' => array('Categoria.descricao'))
 		);
+		
+		public function buscaCategoria($data = array()) {
+			$filtro = $data['categoria'];
+			$conditions = array(
+            'OR' => array(
+                'Categoria.id LIKE' => $filtro
+            ));
+        return $conditions;
+		}
 	}
 ?>

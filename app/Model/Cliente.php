@@ -44,10 +44,19 @@
 			'nome' => array('type' => 'like'),
 			'username' => array('type' => 'like'),
 			'matricula' => array('type' => 'like'),
-			'status' => array('type' => 'like'),
+			'status' => array('type' => 'query', 'method' => 'buscaStatus'),
 			'email' => array('type' => 'like'),
+			'telefone1' => array('type' => 'like'),
 			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome'))
 		);
-
+		
+		public function buscaStatus($data = array()) {
+			$filtro = $data['status'];
+			$conditions = array(
+            'OR' => array(
+                'Cliente.status LIKE' => $filtro
+            ));
+        return $conditions;
+		}
 	}
 ?>

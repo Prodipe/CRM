@@ -2,14 +2,17 @@
 	<legend>Pesquisa</legend>
 	<?php echo $this->Form->create('Cliente', array('url' => array_merge(array('action' => 'index'), $this->params['pass']))); ?>
 	<?php echo $this->Form->input('nome', array('div' => false, 'label' => 'Nome'));?>
-	<?php echo $this->Form->input('username', array('div' => false, 'label' => 'Nome de usuário'));?>
-	<?php echo $this->Form->input('matricula', array('div' => false, 'label' => 'Matrícula'));?>
+	<?php //echo $this->Form->input('username', array('div' => false, 'label' => 'Nome de usuário'));?>
+	<?php //echo $this->Form->input('matricula', array('div' => false, 'label' => 'Matrícula'));?>
 	
 	<?php $options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
-	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'multiple' => 'select', 'options' => $options));?>
+	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'options' => $options, 'empty' => 'Todos'));?>
 	
-	<?php echo $this->Form->input('email', array('div' => false, 'label' => 'Email'));?>
-	<?php echo $this->Form->input('empresa', array('div' => false, 'label' => 'Empresa'));?>
+	<?php //echo $this->Form->input('data_hora', array('label' => 'Data de Cadastro', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 80));?>
+	
+	<?php //echo $this->Form->input('email', array('div' => false, 'label' => 'Email'));?>
+	<?php //echo $this->Form->input('telefone1', array('div' => false, 'label' => 'Telefone 1'));?>
+	<?php //echo $this->Form->input('empresa', array('div' => false, 'label' => 'Empresa'));?>
 	<?php echo $this->Form->submit(__('Buscar'), array('div' => false));?>
 	<?php echo $this->Form->end();?>
 </fieldset>
