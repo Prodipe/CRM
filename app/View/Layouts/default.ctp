@@ -48,13 +48,13 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<!-- CONTEÚDO -->
 			<?php if (AuthComponent::user('nivel_acesso') == 1) { 	
 				echo $this->HTML->link('Empresas', array('admin' => true, 'controller' => 'empresas', 'action' => 'index'));
-				echo $this->HTML->link('Usuários', array('admin' => true, 'controller' => 'usuarios', 'action' => 'index'));
+				echo $this->HTML->link('Usuários', array('plugin' => false, 'admin' => true, 'controller' => 'usuarios', 'action' => 'index'));
 				echo $this->HTML->link('Clientes', array('admin' => false, 'controller' => 'clientes', 'action' => 'index'));
 				echo $this->HTML->link('Atendimentos', array('admin' => false, 'controller' => 'atendimentos', 'action' => 'index'));
 				echo $this->HTML->link('Meus atendimentos', array('admin' => true, 'controller' => 'usuarios', 'action' => 'ver', AuthComponent::user('id')));
 				echo $this->HTML->link('Categorias', array('admin' => true, 'controller' => 'categorias', 'action' => 'index'));
 				echo $this->HTML->link('Parâmetros', array('admin' => true, 'controller' => 'parametros', 'action' => 'index'));
-				//echo $this->HTML->link('Relatórios', array('plugin'=>'report_manager','admin' => false));
+				echo $this->HTML->link('Relatórios', array('plugin' => 'report_manager', 'admin' => false, 'controller' => 'reports', 'action' => 'index'));
 				echo " | ";
 				echo $this->HTML->link('Editar informações', array('admin' => false, 'controller' => 'usuarios', 'action' => 'editar', AuthComponent::user('id')));
 				echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => 'mudar_senha'));
@@ -65,7 +65,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				echo $this->HTML->link('Clientes', array('controller' => 'clientes', 'action' => 'index'));
 				echo $this->HTML->link('Atendimentos', array('controller' => 'atendimentos', 'action' => 'index'));
 				echo $this->HTML->link('Meus atendimentos', array('admin' => false, 'controller' => 'usuarios', 'action' => 'ver', AuthComponent::user('id')));
-				//echo $this->HTML->link('Relatórios', array('plugin'=>'ReportManager','admin' => false, 'controller' => 'reports', 'action' => 'index'));
+				echo $this->HTML->link('Relatórios', array('plugin' => 'report_manager', 'admin' => false, 'controller' => 'reports', 'action' => 'index'));
 				echo " | ";
 				echo $this->HTML->link('Editar informações', array('admin' => false, 'controller' => 'usuarios', 'action' => 'editar', AuthComponent::user('id')));
 				echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => 'mudar_senha'));
