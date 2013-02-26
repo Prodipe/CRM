@@ -42,7 +42,7 @@
 
 <table>
 	<tr>
-		<th>Id</th>
+		<th>ID</th>
 		<th>Categoria</th>
         <th>Protocolo</th>
         <th>Data/Hora</th>
@@ -91,7 +91,7 @@
 		<td><?php echo $this->Html->link($atendimento['Atendimento']['id'], array('controller' => 'atendimentos', 'action' => 'ver', $atendimento['Atendimento']['id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'ver', $atendimento['Atendimento']['categoria_id'])); ?>
+			<?php echo $atendimento['Categoria']['descricao']; //$this->HTML->link($atendimento['Categoria']['descricao'], array('controller' => 'categorias', 'action' => 'ver', $atendimento['Atendimento']['categoria_id'])); ?>
 		</td>
 		<td><?php echo $atendimento['Atendimento']['protocolo']; ?></td>
 		<td>
@@ -103,10 +103,10 @@
 		<td><?php echo $atendimento['Atendimento']['observacoes']; ?></td>
 		<td><?php echo $atendimento['Atendimento']['nota']; ?></td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $atendimento['Atendimento']['empresa_id'])); ?>
+			<?php echo $atendimento['Empresa']['nome']; //$this->HTML->link($atendimento['Empresa']['nome'], array('controller' => 'empresas', 'action' => 'ver', $atendimento['Atendimento']['empresa_id'])); ?>
 		</td>
 		<td>
-			<?php echo $this->HTML->link($atendimento['Usuario']['nome'], array('controller' => 'usuarios', 'action' => 'ver', $atendimento['Atendimento']['usuario_id'])); ?>
+			<?php echo $atendimento['Usuario']['nome']; //$this->HTML->link($atendimento['Usuario']['nome'], array('controller' => 'usuarios', 'action' => 'ver', $atendimento['Atendimento']['usuario_id'])); ?>
 		</td>
 		<td><?php echo $this->Html->link('Editar', array('controller' => 'atendimentos', 'action' => 'editar', $atendimento['Atendimento']['id'])); ?>
 			<?php echo $this->Form->postLink('Deletar',

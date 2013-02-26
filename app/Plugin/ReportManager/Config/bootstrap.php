@@ -7,7 +7,7 @@ Configure::write('ReportManager.globalFieldIgnoreList', array(
 ));
 Configure::write('ReportManager.modelIgnoreList',array(
     'AppModel',
-    'MyModel2'
+    'Usuario'
 ));
 Configure::write('ReportManager.modelFieldIgnoreList',array(
     'MyModel' => array(

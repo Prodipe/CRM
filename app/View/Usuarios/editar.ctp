@@ -1,7 +1,7 @@
 ﻿<h2>Editar informações do usuário</h2>
 
 <!-- Link para voltar -->
-<p><?php echo $this->HTML->link('Voltar', array('controller' => 'usuarios', 'action' => 'index')); ?></p>
+<?php //echo $this->HTML->link('Voltar', array('controller' => 'usuarios', 'action' => 'index')); ?>
 
 <?php
     echo $this->Form->create('Usuario');

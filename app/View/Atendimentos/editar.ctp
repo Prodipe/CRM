@@ -8,7 +8,7 @@
 	echo $this->Form->input('protocolo', array('label' => 'Protocolo'));
 	
 	// Define a data no padrão Dia-Mês-Ano
-	echo $this->Form->input('data_hora', array('label' => 'Data de Cadastro', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 80));
+	//echo $this->Form->input('data_hora', array('label' => 'Data de Cadastro', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 80));
 	
 	$status_options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');
 	$priori_options = array('Baixa' => 'Baixa', 'Média' => 'Média', 'Alta' => 'Alta');

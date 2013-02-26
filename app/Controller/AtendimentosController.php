@@ -8,7 +8,7 @@
 		
 		// Paginação
 		public $paginate = array(
-			'limit' => 5,
+			'limit' => 20,
 			'order' => array('Atendimento.id' => 'asc')
 		);
 		
@@ -23,12 +23,14 @@
 		
 		public function ver($id = null) {
 			if (!$id) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
 			$atendimento = $this->Atendimento->findById($id);
 			
 			if (!$atendimento) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
@@ -45,21 +47,23 @@
 			if ($this->request->is('post')) {
 				$this->Atendimento->create();
 				if ($this->Atendimento->save($this->request->data)) {
-					$this->Session->setFlash(__('O atendimento foi adicionado'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('O atendimento foi adicionado'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('O atendimento não foi adicionado');
+					$this->Session->setFlash('O atendimento não foi adicionado', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 		}
 		
 		public function editar($id = null) {
 			if (!$id) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 
 			$atendimento = $this->Atendimento->findById($id);
 			if (!$atendimento) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
@@ -72,10 +76,10 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Atendimento->id = $id;
 				if ($this->Atendimento->save($this->request->data)) {
-					$this->Session->setFlash(__('As informações do atendimento foram atualizadas'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('As informações do atendimento foram atualizadas'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram atualizadas');
+					$this->Session->setFlash('As informações não foram atualizadas', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 
@@ -90,11 +94,12 @@
 			}
 			
 			if ($this->Atendimento->delete($id)) {
-				$this->Session->setFlash(__('O atendimento: ' . $id . ' foi deletado'), 'default', array('class' => 'success'));
+				$this->Session->setFlash(__('O atendimento: ' . $id . ' foi deletado'), 'default', array('class' => 'alert alert-success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}
 		
+		/*
 		// Ordenar os atendimentos
 		public function ordenar($tipo) {
 			if ($tipo == 'id') {
@@ -116,6 +121,7 @@
 				$this->set('atendimentos', $this->Atendimento->find('all', array('order' => array('Atendimento.nota' => 'ASC'))));
 			}
 		}
+		*/
 		
 		/*
 		// Adicionar um atendimento para o cliente

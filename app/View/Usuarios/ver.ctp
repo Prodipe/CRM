@@ -20,9 +20,6 @@
 
 <p><?php echo "Empresa: " . $usuario['Empresa']['nome']; ?></p>
 
-<!-- Link para voltar -->
-<p><?php echo $this->HTML->link('Ir para usuários', array('controller' => 'usuarios', 'action' => 'index')); ?></p>
-
 <table>
 	<tr>
 		<th>ID</th>

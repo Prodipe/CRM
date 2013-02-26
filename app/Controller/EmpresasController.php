@@ -8,12 +8,14 @@
 		
 		public function admin_ver($id = null) {
 			if (!$id) {
+				$this->redirect(array('admin' => true, 'action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
 			$empresa = $this->Empresa->findById($id);
 			
 			if (!$empresa) {
+				$this->redirect(array('admin' => true, 'action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
@@ -24,31 +26,33 @@
 			if ($this->request->is('post')) {
 				$this->Empresa->create();
 				if ($this->Empresa->save($this->request->data)) {
-					$this->Session->setFlash(__('A empresa foi adicionada'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('A empresa foi adicionada'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('Nenhuma empresa foi adicionada');
+					$this->Session->setFlash('Nenhuma empresa foi adicionada', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 		}
 		
 		public function admin_editar($id = null) {
 			if (!$id) {
+				$this->redirect(array('admin' => true, 'action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 
 			$empresa = $this->Empresa->findById($id);
 			if (!$empresa) {
+				$this->redirect(array('admin' => true, 'action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Empresa->id = $id;
 				if ($this->Empresa->save($this->request->data)) {
-					$this->Session->setFlash(__('As informações foram atualizadas'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('As informações foram atualizadas'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram atualizadas');
+					$this->Session->setFlash('As informações não foram atualizadas', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 
@@ -65,11 +69,12 @@
 			$empresa = $this->Empresa->findById($id);
 			
 			if ($this->Empresa->delete($id)) {
-				$this->Session->setFlash(__('A empresa: ' . $empresa['Empresa']['nome'] . ' foi deletada'), 'default', array('class' => 'success'));
+				$this->Session->setFlash(__('A empresa: ' . $empresa['Empresa']['nome'] . ' foi deletada'), 'default', array('class' => 'alert alert-success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}
 		
+		/*
 		// Ordenar as empresas
 		public function admin_ordenar($tipo) {
 			if ($tipo == 'nome') {
@@ -79,5 +84,6 @@
 				$this->set('empresas', $this->Empresa->find('all', array('order' => array('Empresa.razao_social' => 'ASC'))));
 			}
 		}
+		*/
 	}
 ?>

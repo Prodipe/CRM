@@ -25,7 +25,7 @@
 
 <?php if (($usuario['Usuario']['status'] == 1) && ($usuario['Usuario']['nivel_acesso'] != 1)) { ?>
 
-	<h2><?php echo "Tornar usuário administrador"; ?></h2>
+	<h2><?php echo "Tornar usuário em administrador"; ?></h2>
     
 	<?php echo $this->Form->checkbox('nivel_acesso', array('value' => 1)); ?>
 	

@@ -1,8 +1,8 @@
-﻿<p><?php echo $this->HTML->link('Editar informações', array('controller' => 'usuarios', 'action' => 'editar', AuthComponent::user('id'))); ?></p>
+﻿<?php //echo $this->HTML->link('Editar informações', array('controller' => 'usuarios', 'action' => 'editar', AuthComponent::user('id'))); ?>
 
-<p><?php echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => 'mudar_senha')); ?></p>
+<?php //echo $this->HTML->link('Mudar senha', array('admin' => false, 'controller' => 'usuarios', 'action' => 'mudar_senha')); ?>
 
-<h3>Usuários Cadastrados</h3>
+<h3>Usuários</h3>
 
 <?php echo $this->Html->link('Adicionar um usuário', array('controller' => 'usuarios', 'action' => 'adicionar')); ?>
 

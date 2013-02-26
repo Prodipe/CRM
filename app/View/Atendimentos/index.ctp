@@ -9,13 +9,13 @@
 	<?php //echo $this->Form->input('plano_atendimento', array('div' => false, 'label' => 'Plano de atendimento'));?>
 	<?php //echo $this->Form->input('observacoes', array('div' => false, 'label' => 'Observações'));?>
 	
-	<?php //$options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
-	<?php //echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'multiple' => 'checkbox', 'options' => $options));?>
-	
 	<?php //echo $this->Form->input('nota', array('div' => false, 'label' => 'Nota recebida'));?>
 	<?php echo $this->Form->input('empresa', array('div' => false, 'label' => 'Empresa'));?>
 	<?php echo $this->Form->input('cliente', array('div' => false, 'label' => 'Cliente'));?>
 	<?php echo $this->Form->input('usuario', array('div' => false, 'label' => 'Usuário'));?>
+	
+	<?php $options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
+	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'options' => $options, 'empty' => 'Todos'));?>
 	
 	<?php //echo $this->Form->input('categoria', array('div' => false, 'label' => 'Categoria'));?>
 	<?php echo $this->Form->input('categoria', array('div' => false, 'label' => 'Categoria', 'select' => $categorias, 'empty' => 'Todos'));?>
@@ -24,7 +24,7 @@
 	<?php echo $this->Form->end();?>
 </fieldset>
 
-<h3>Atendimentos Cadastrados</h3>
+<h3>Atendimentos</h3>
 
 <?php echo $this->Html->link('Adicionar um atendimento', array('controller' => 'atendimentos', 'action' => 'adicionar')); ?>
 
@@ -111,3 +111,16 @@
     <?php endforeach; ?>
     <?php unset($atendimento); ?>
 </table>
+
+<!-- Paginação -->
+<div class="paging">
+	<!-- Mostra número de páginas -->
+	<?php echo $this->Paginator->numbers();?>
+
+	<!-- Mostra os links anterior e próximo -->
+	<?php echo $this->Paginator->prev('« Anterior', null, null, array('class' => 'disabled'));?>
+	<?php echo $this->Paginator->next('Próximo »', null, null, array('class' => 'disabled'));?>
+
+	<!-- Formato: página X de Y, W resultados de um total de Z -->
+	<p><?php echo $this->Paginator->counter(array('format' => 'Página {:page} de {:pages}, mostrando {:current} resultados de um total de {:count}'));?></p>
+ </div>

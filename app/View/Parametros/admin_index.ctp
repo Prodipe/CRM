@@ -1,12 +1,12 @@
-﻿<h3>Parâmetros Cadastrados</h3>
+﻿<h3>Parâmetros</h3>
 
 <?php echo $this->Html->link('Adicionar um parâmetro', array('controller' => 'parametros', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>
-        <th><?php echo $this->Html->link('ID', array('action' => 'ordenar', 'id'));?></th>
-        <th><?php echo $this->Html->link('Descrição', array('action' => 'ordenar', 'descricao'));?></th>
-        <th><?php echo $this->Html->link('Valor', array('action' => 'ordenar', 'valor'));?></th>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Valor</th>
 		<th>Empresa</th>
 		<th>Ações</th>
     </tr>

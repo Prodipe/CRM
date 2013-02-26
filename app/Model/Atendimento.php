@@ -26,6 +26,7 @@
 			'protocolo' => array('type' => 'like'),
 			'plano_atendimento' => array('type' => 'like'),
 			'observacoes' => array('type' => 'like'),
+			'status' => array('type' => 'query', 'method' => 'buscaStatus'),
 			'nota' => array('type' => 'value'),
 			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome')),
 			'usuario' => array('type' => 'like', 'field' => array('Usuario.nome')),
@@ -34,13 +35,24 @@
 			'categoria' => array('type' => 'query', 'method' => 'buscaCategoria', 'field' => array('Categoria.descricao'))
 		);
 		
+		public function buscaStatus($data = array()) {
+			$filtro = $data['status'];
+			$conditions = array(
+            'OR' => array(
+                'Atendimento.status LIKE' => $filtro
+            ));
+			
+			return $conditions;
+		}
+		
 		public function buscaCategoria($data = array()) {
 			$filtro = $data['categoria'];
 			$conditions = array(
             'OR' => array(
                 'Categoria.id LIKE' => $filtro
             ));
-        return $conditions;
+			
+			return $conditions;
 		}
 	}
 ?>

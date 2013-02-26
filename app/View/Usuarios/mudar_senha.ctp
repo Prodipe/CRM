@@ -1,12 +1,14 @@
 <h2>Mudar senha</h2>
 
-<?php 
+<?php
+/* 
 	if (AuthComponent::user('nivel_acesso') != 1) {
 		echo $this->HTML->link('Voltar', array('controller' => 'usuarios', 'action' => 'index')); 
 	}
 	else {
 		echo $this->HTML->link('Voltar', array('admin' => true, 'controller' => 'usuarios', 'action' => 'index')); 
 	}
+*/	
 ?>
 
 <?php

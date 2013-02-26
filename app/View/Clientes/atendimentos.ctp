@@ -1,4 +1,4 @@
-﻿<h2>Adicionar Atendimento para o Cliente</h2>
+﻿<h2>Adicionar atendimento para o cliente</h2>
 
 <?php //print_r($empresa ); ?>
 <?php //print_r($cliente); ?>

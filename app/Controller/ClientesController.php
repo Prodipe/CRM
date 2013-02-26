@@ -8,7 +8,7 @@
 		
 		// Paginação
 		public $paginate = array(
-			'limit' => 5,
+			'limit' => 20,
 			'order' => array('Cliente.nome' => 'asc')
 		);
 		
@@ -25,12 +25,14 @@
 		
 		public function ver($id = null) {
 			if (!$id) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
 			$cliente = $this->Cliente->findById($id);
 			
 			if (!$cliente) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
@@ -47,20 +49,22 @@
 			if ($this->request->is('post')) {
 				$this->Cliente->create();
 				if ($this->Cliente->save($this->request->data)) {
-					$this->Session->setFlash(__('O cliente foi adicionado'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('O cliente foi adicionado'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('Nenhum cliente foi adicionado');
+					$this->Session->setFlash('Nenhum cliente foi adicionado', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 		}
 		
 		public function editar($id = null) {
 			if (!$id) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			$cliente = $this->Cliente->findById($id);
 			if (!$cliente) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
@@ -70,10 +74,10 @@
 			if ($this->request->is('post') || $this->request->is('put')) {
 				$this->Cliente->id = $id;
 				if ($this->Cliente->save($this->request->data)) {
-					$this->Session->setFlash(__('As informações do cliente foram atualizadas'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('As informações do cliente foram atualizadas'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
-					$this->Session->setFlash('As informações não foram atualizadas');
+					$this->Session->setFlash('As informações não foram atualizadas', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 			if (!$this->request->data) {
@@ -89,7 +93,7 @@
 			$cliente = $this->Cliente->findById($id);
 			
 			if ($this->Cliente->delete($id)) {
-				$this->Session->setFlash(__('O cliente: ' . $cliente['Cliente']['nome'] . ' foi deletado'), 'default', array('class' => 'success'));
+				$this->Session->setFlash(__('O cliente: ' . $cliente['Cliente']['nome'] . ' foi deletado'), 'default', array('class' => 'alert alert-success'));
 				$this->redirect(array('action' => 'index'));
 			}
 		}
@@ -97,12 +101,14 @@
 		// Adicionar um atendimento para o cliente
 		public function atendimentos($id = null) {
 			if (!$id) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 
 			$cliente = $this->Cliente->findById($id);
 			
 			if (!$cliente) {
+				$this->redirect(array('action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
 			
@@ -115,14 +121,15 @@
 			if ($this->request->is('post')) {
 				$this->Cliente->Atendimento->create();
 				if ($this->Cliente->Atendimento->save($this->request->data)) {
-					$this->Session->setFlash(__('O atendimento do cliente foi adicionado'), 'default', array('class' => 'success'));
+					$this->Session->setFlash(__('O atendimento do cliente foi adicionado'), 'default', array('class' => 'alert alert-success'));
 					$this->redirect(array('action' => 'ver', $id));
 				} else {
-					$this->Session->setFlash('O atendimento do cliente não foi adicionado');
+					$this->Session->setFlash('O atendimento do cliente não foi adicionado', 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 		}
 		
+		/*
 		// Pesquisar por clientes
 		public function buscar() {
 			$this->Prg->commonProcess();
@@ -151,6 +158,7 @@
 				$this->set('clientes', $this->Cliente->find('all', array('order' => array('Cliente.telefone1' => 'ASC'))));
 			}
 		}
+		*/
 		
 		/*
 		// Ordenar os atendimentos do cliente

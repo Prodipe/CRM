@@ -1,12 +1,12 @@
-﻿<h3>Empresas Cadastradas</h3>
+﻿<h3>Empresas</h3>
 
 <?php echo $this->Html->link('Adicionar uma empresa', array('controller' => 'empresas', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>
         <!--<th>Id</th>-->
-        <th><?php echo $this->Html->link('Nome', array('action' => 'ordenar', 'nome'));?></th>
-        <th><?php echo $this->Html->link('Razão Social', array('action' => 'ordenar', 'razao'));?></th>
+        <th>Nome</th>
+        <th>Razão Social</th>
 		<th>Ações</th>
     </tr>
 

@@ -1,11 +1,11 @@
-﻿<h3>Categorias Cadastradas</h3>
+﻿<h3>Categorias</h3>
 
 <?php echo $this->Html->link('Adicionar uma categoria', array('controller' => 'categorias', 'action' => 'adicionar')); ?>
 
 <table>
     <tr>
-        <th><?php echo $this->Html->link('ID', array('action' => 'ordenar', 'id'));?></th>
-        <th><?php echo $this->Html->link('Descrição', array('action' => 'ordenar', 'descricao'));?></th>
+        <th>ID</th>
+        <th>Descrição</th>
 		<th>Ações</th>
     </tr>
 

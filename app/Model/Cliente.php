@@ -47,6 +47,7 @@
 			'status' => array('type' => 'query', 'method' => 'buscaStatus'),
 			'email' => array('type' => 'like'),
 			'telefone1' => array('type' => 'like'),
+			'data_cadastro' => array('type' => 'value', 'field' => 'Cliente.data_cadastro BETWEEN ? AND ?'),
 			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome'))
 		);
 		
@@ -56,7 +57,16 @@
             'OR' => array(
                 'Cliente.status LIKE' => $filtro
             ));
-        return $conditions;
+			return $conditions;
 		}
+		/*
+		public function buscaData($data = array()) {
+			$filtro = $data['data_cadastro'];
+			$conditions = array(
+            'OR' => array(
+                'Cliente.data_cadastro LIKE' => '%' . $filtro . '%'
+            ));
+			return $conditions;
+		}*/
 	}
 ?>
