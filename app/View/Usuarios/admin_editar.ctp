@@ -3,6 +3,8 @@
 <!-- Link para voltar -->
 <p><?php echo $this->HTML->link('Voltar', array('controller' => 'usuarios', 'action' => 'index')); ?></p>
 
+<p><?php echo $this->HTML->link('Mudar senha do usuário', array('controller' => 'usuarios', 'action' => 'mudar_senha', $usuario['Usuario']['id'])); ?></p>
+
 <?php
     echo $this->Form->create('Usuario');
 	echo $this->Form->input('nome');

@@ -242,6 +242,19 @@
 				$this->redirect(array('admin' => false, 'controller' => 'clientes', 'action' => 'index'));
 				throw new NotFoundException(__('Inválido'));
 			}
+			if ($usuario['Usuario']['nivel_acesso'] != 1) {
+				if ($this->request->is('post') || $this->request->is('put')) {
+					$this->Usuario->id = $id;
+					if ($this->Usuario->save($this->request->data)) {
+						$this->Session->setFlash(__('As informações do usuário foram atualizadas'), 'default', array('class' => 'alert alert-success'));
+					} else {
+						$this->Session->setFlash('As informações não foram atualizadas', 'default', array('class' => 'alert alert-danger'));
+					}
+				}
+			}
+			else {
+				$this->redirect(array('admin' => false, 'controller' => 'clientes', 'action' => 'index'));
+			}
 		}
 		
 		/* Área de login */
