@@ -31,6 +31,7 @@
 			'empresa' => array('type' => 'like', 'field' => array('Empresa.nome')),
 			'usuario' => array('type' => 'like', 'field' => array('Usuario.nome')),
 			'cliente' => array('type' => 'like', 'field' => array('Cliente.nome')),
+			'prioridade' => array('type' => 'query', 'method' => 'buscaPrioridade'),
 			//'categoria' => array('type' => 'like', 'field' => array('Categoria.descricao'))
 			'categoria' => array('type' => 'query', 'method' => 'buscaCategoria', 'field' => array('Categoria.descricao'))
 		);
@@ -50,6 +51,16 @@
 			$conditions = array(
             'OR' => array(
                 'Categoria.id LIKE' => $filtro
+            ));
+			
+			return $conditions;
+		}
+		
+		public function buscaPrioridade($data = array()) {
+			$filtro = $data['prioridade'];
+			$conditions = array(
+            'OR' => array(
+                'Atendimento.prioridade LIKE' => $filtro
             ));
 			
 			return $conditions;

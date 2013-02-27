@@ -17,6 +17,9 @@
 	<?php $options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
 	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'options' => $options, 'empty' => 'Todos'));?>
 	
+	<?php $prioridades = array('Baixa' => 'Baixa', 'Media' => 'Media', 'Alta' => 'Alta');?>
+	<?php echo $this->Form->input('prioridade', array('div' => false, 'label' => 'Prioridade', 'options' => $prioridades, 'empty' => 'Todos'));?>
+	
 	<?php //echo $this->Form->input('categoria', array('div' => false, 'label' => 'Categoria'));?>
 	<?php echo $this->Form->input('categoria', array('div' => false, 'label' => 'Categoria', 'select' => $categorias, 'empty' => 'Todos'));?>
 	

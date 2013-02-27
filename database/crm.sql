@@ -33,14 +33,14 @@ CREATE TABLE IF NOT EXISTS `atendimentos` (
   `status` varchar(50) NOT NULL,
   `prioridade` varchar(50) NOT NULL,
   `plano_atendimento` text NOT NULL,
-  `observacoes` text DEFAULT NULL,
+  `observacoes` text,
   `nota` varchar(50) NOT NULL,
   `empresa_id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL,
   `cliente_id` int(11) NOT NULL,
   `categoria_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `categorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
@@ -67,11 +67,11 @@ CREATE TABLE IF NOT EXISTS `clientes` (
   `status` varchar(50) NOT NULL,
   `data_cadastro` datetime NOT NULL,
   `email` varchar(100) NOT NULL,
-  `telefone1` int(15) NOT NULL,
-  `telefone2` int(15) DEFAULT NULL,
+  `telefone1` varchar(50) NOT NULL,
+  `telefone2` varchar(50) DEFAULT NULL,
   `empresa_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `empresas` (
   `nome` varchar(150) NOT NULL,
   `razao_social` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `parametros` (
   `valor` varchar(50) NOT NULL,
   `empresa_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -110,10 +110,20 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(150) NOT NULL,
   `matricula` varchar(50) NOT NULL,
-  `status` varchar(50) NOT NULL,
+  `status` int(11) NOT NULL,
   `empresa_id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `nivel_acesso` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `nome`, `matricula`, `status`, `empresa_id`, `username`, `password`, `nivel_acesso`) VALUES
+(1, 'Administrador', '', 1, 0, 'admin', '26a17a3f33f2793903a6ba4e4fd24721f3f50e92', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

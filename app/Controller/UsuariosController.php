@@ -229,6 +229,21 @@
 			}
 		}
 		
+		// Função utilizada pelo administrador para mudar senha de usuários comuns
+		public function admin_mudar_senha($id = null) {
+			if (!$id) {
+				$this->redirect(array('admin' => false, 'controller' => 'clientes', 'action' => 'index'));
+				throw new NotFoundException(__('Inválido'));
+			}
+			
+			$usuario = $this->Usuario->findById($id);
+			
+			if (!$usuario) {
+				$this->redirect(array('admin' => false, 'controller' => 'clientes', 'action' => 'index'));
+				throw new NotFoundException(__('Inválido'));
+			}
+		}
+		
 		/* Área de login */
 		public function login() {
 			$this->set('title_for_layout', __('Log in'));

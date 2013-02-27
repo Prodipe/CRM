@@ -4,16 +4,16 @@
 	<?php echo $this->Form->input('nome', array('div' => false, 'label' => 'Nome'));?>
 	<?php echo $this->Form->input('username', array('div' => false, 'label' => 'Nome de usuário'));?>
 	<?php echo $this->Form->input('matricula', array('div' => false, 'label' => 'Matrícula'));?>
-	
-	<?php $options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
-	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'options' => $options, 'empty' => 'Todos'));?>
-	
-	<?php echo $this->Form->input('data_cadastro', array('div' => false, 'label' => 'Data de Cadastro', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 80));?>
+
 	<?php //echo $this->Form->input('data_cadastro', array('div' => false, 'label' => 'Data de Cadastro', 'dateFormat' => 'DMY', 'minYear' => date('Y') - 80));?>
 	
 	<?php echo $this->Form->input('email', array('div' => false, 'label' => 'Email'));?>
 	<?php echo $this->Form->input('telefone1', array('div' => false, 'label' => 'Telefone 1'));?>
 	<?php echo $this->Form->input('empresa', array('div' => false, 'label' => 'Empresa'));?>
+	
+	<?php $options = array('Ativo' => 'Ativo', 'Inativo' => 'Inativo');?>
+	<?php echo $this->Form->input('status', array('div' => false, 'label' => 'Status', 'options' => $options, 'empty' => 'Todos'));?>
+	
 	<?php echo $this->Form->submit(__('Buscar'), array('div' => false));?>
 	<?php echo $this->Form->end();?>
 </fieldset>
